@@ -1,0 +1,940 @@
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220921222835)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220921222835"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGroceries (20220921223539)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "groceries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price" integer, "quantity" varchar, "store" varchar, "date" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220921223539"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20220921223827)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer NOT NULL, "grocery_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_41b11f6ec6"
+FOREIGN KEY ("grocery_id")
+  REFERENCES "groceries" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_comments_on_grocery_id" ON "comments" ("grocery_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220921223827"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-21 22:39:20.584210"], ["updated_at", "2022-09-21 22:39:20.584210"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGrocery Load (0.5ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+Started GET "/sessions" for ::1 at 2022-09-21 19:13:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+Started GET "/" for ::1 at 2022-09-21 19:13:21 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/seanoh/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/seanoh/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 360)
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 3701)
+
+
+Started GET "/users" for ::1 at 2022-09-21 19:13:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/comments" for ::1 at 2022-09-21 19:13:46 -0400
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 4194)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "username1"], ["password_digest", "[FILTERED]"], ["created_at", "2022-09-22 01:05:44.624130"], ["updated_at", "2022-09-22 01:05:44.624130"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "username2"], ["password_digest", "[FILTERED]"], ["created_at", "2022-09-22 01:05:44.884086"], ["updated_at", "2022-09-22 01:05:44.884086"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "username3"], ["password_digest", "[FILTERED]"], ["created_at", "2022-09-22 01:05:45.143719"], ["updated_at", "2022-09-22 01:05:45.143719"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrocery Create (0.2ms)[0m  [1m[32mINSERT INTO "groceries" ("name", "price", "quantity", "store", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "French Toast"], ["price", 19], ["quantity", "8 ounces"], ["store", "Costco"], ["date", "2022-09-13"], ["created_at", "2022-09-22 01:05:46.169285"], ["updated_at", "2022-09-22 01:05:46.169285"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrocery Create (0.1ms)[0m  [1m[32mINSERT INTO "groceries" ("name", "price", "quantity", "store", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vegetable Soup"], ["price", 20], ["quantity", "5 ounces"], ["store", "Costco"], ["date", "2022-09-13"], ["created_at", "2022-09-22 01:05:46.174131"], ["updated_at", "2022-09-22 01:05:46.174131"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrocery Create (0.1ms)[0m  [1m[32mINSERT INTO "groceries" ("name", "price", "quantity", "store", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Caprese Salad"], ["price", 10], ["quantity", "2 ounces"], ["store", "Costco"], ["date", "2022-09-13"], ["created_at", "2022-09-22 01:05:46.176373"], ["updated_at", "2022-09-22 01:05:46.176373"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrocery Create (0.1ms)[0m  [1m[32mINSERT INTO "groceries" ("name", "price", "quantity", "store", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Caprese Salad"], ["price", 16], ["quantity", "4 pounds"], ["store", "Costco"], ["date", "2022-09-13"], ["created_at", "2022-09-22 01:05:46.179156"], ["updated_at", "2022-09-22 01:05:46.179156"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrocery Create (0.1ms)[0m  [1m[32mINSERT INTO "groceries" ("name", "price", "quantity", "store", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Meatballs with Sauce"], ["price", 13], ["quantity", "3 pounds"], ["store", "Costco"], ["date", "2022-09-13"], ["created_at", "2022-09-22 01:05:46.181564"], ["updated_at", "2022-09-22 01:05:46.181564"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrocery Create (0.2ms)[0m  [1m[32mINSERT INTO "groceries" ("name", "price", "quantity", "store", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arepas"], ["price", 20], ["quantity", "2 tons"], ["store", "Costco"], ["date", "2022-09-13"], ["created_at", "2022-09-22 01:05:46.183572"], ["updated_at", "2022-09-22 01:05:46.183572"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrocery Create (0.1ms)[0m  [1m[32mINSERT INTO "groceries" ("name", "price", "quantity", "store", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pasta Carbonara"], ["price", 19], ["quantity", "9 ounces"], ["store", "Costco"], ["date", "2022-09-13"], ["created_at", "2022-09-22 01:05:46.185796"], ["updated_at", "2022-09-22 01:05:46.185796"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrocery Create (0.1ms)[0m  [1m[32mINSERT INTO "groceries" ("name", "price", "quantity", "store", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pappardelle alla Bolognese"], ["price", 20], ["quantity", "6 tons"], ["store", "Costco"], ["date", "2022-09-13"], ["created_at", "2022-09-22 01:05:46.187801"], ["updated_at", "2022-09-22 01:05:46.187801"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "iterate seamless e-markets"], ["user_id", 2], ["grocery_id", 3], ["created_at", "2022-09-22 01:05:46.214807"], ["updated_at", "2022-09-22 01:05:46.214807"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "revolutionize clicks-and-mortar ROI"], ["user_id", 1], ["grocery_id", 7], ["created_at", "2022-09-22 01:05:46.218187"], ["updated_at", "2022-09-22 01:05:46.218187"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "optimize distributed eyeballs"], ["user_id", 3], ["grocery_id", 8], ["created_at", "2022-09-22 01:05:46.221173"], ["updated_at", "2022-09-22 01:05:46.221173"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "enable strategic networks"], ["user_id", 1], ["grocery_id", 4], ["created_at", "2022-09-22 01:05:46.223877"], ["updated_at", "2022-09-22 01:05:46.223877"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "strategize transparent platforms"], ["user_id", 1], ["grocery_id", 6], ["created_at", "2022-09-22 01:05:46.226586"], ["updated_at", "2022-09-22 01:05:46.226586"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "enable real-time models"], ["user_id", 2], ["grocery_id", 2], ["created_at", "2022-09-22 01:05:46.229307"], ["updated_at", "2022-09-22 01:05:46.229307"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "syndicate viral experiences"], ["user_id", 3], ["grocery_id", 4], ["created_at", "2022-09-22 01:05:46.232034"], ["updated_at", "2022-09-22 01:05:46.232034"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "incubate holistic interfaces"], ["user_id", 1], ["grocery_id", 6], ["created_at", "2022-09-22 01:05:46.234751"], ["updated_at", "2022-09-22 01:05:46.234751"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "orchestrate dynamic infomediaries"], ["user_id", 1], ["grocery_id", 4], ["created_at", "2022-09-22 01:05:46.237417"], ["updated_at", "2022-09-22 01:05:46.237417"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "empower scalable web services"], ["user_id", 1], ["grocery_id", 2], ["created_at", "2022-09-22 01:05:46.240119"], ["updated_at", "2022-09-22 01:05:46.240119"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "deploy user-centric applications"], ["user_id", 2], ["grocery_id", 1], ["created_at", "2022-09-22 01:05:46.242812"], ["updated_at", "2022-09-22 01:05:46.242812"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "mesh clicks-and-mortar infomediaries"], ["user_id", 2], ["grocery_id", 1], ["created_at", "2022-09-22 01:05:46.245622"], ["updated_at", "2022-09-22 01:05:46.245622"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "envisioneer e-business paradigms"], ["user_id", 2], ["grocery_id", 8], ["created_at", "2022-09-22 01:05:46.248352"], ["updated_at", "2022-09-22 01:05:46.248352"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "incubate collaborative niches"], ["user_id", 2], ["grocery_id", 2], ["created_at", "2022-09-22 01:05:46.251120"], ["updated_at", "2022-09-22 01:05:46.251120"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "monetize dynamic e-commerce"], ["user_id", 1], ["grocery_id", 2], ["created_at", "2022-09-22 01:05:46.253800"], ["updated_at", "2022-09-22 01:05:46.253800"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "transform sexy niches"], ["user_id", 1], ["grocery_id", 3], ["created_at", "2022-09-22 01:05:46.256574"], ["updated_at", "2022-09-22 01:05:46.256574"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "enable dynamic architectures"], ["user_id", 1], ["grocery_id", 7], ["created_at", "2022-09-22 01:05:46.259283"], ["updated_at", "2022-09-22 01:05:46.259283"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "optimize turn-key eyeballs"], ["user_id", 3], ["grocery_id", 6], ["created_at", "2022-09-22 01:05:46.261999"], ["updated_at", "2022-09-22 01:05:46.261999"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "integrate frictionless e-markets"], ["user_id", 2], ["grocery_id", 2], ["created_at", "2022-09-22 01:05:46.264690"], ["updated_at", "2022-09-22 01:05:46.264690"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "integrate best-of-breed niches"], ["user_id", 3], ["grocery_id", 1], ["created_at", "2022-09-22 01:05:46.267420"], ["updated_at", "2022-09-22 01:05:46.267420"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" INNER JOIN "comments" ON "groceries"."id" = "comments"."grocery_id" WHERE "comments"."user_id" = ?[0m  [["user_id", 1]]
+Started GET "/" for ::1 at 2022-09-21 21:07:36 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"title"=>"Super Smash Bros", "genre"=>"Fighter", "platform"=>"Gamecube", "image_url"=>"https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-video-game-sample-pack_940x1530.png?v=1628541839", "welcome"=>{"title"=>"Super Smash Bros", "genre"=>"Fighter", "platform"=>"Gamecube", "image_url"=>"https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-video-game-sample-pack_940x1530.png?v=1628541839"}}
+  Rendering /Users/seanoh/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/seanoh/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 357)
+Completed 200 OK in 4ms (Views: 2.8ms | Allocations: 1042)
+
+
+Started GET "/users" for ::1 at 2022-09-21 21:07:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/groceries" for ::1 at 2022-09-21 21:07:49 -0400
+Processing by GroceriesController#index as */*
+  Parameters: {"title"=>"Super Smash Bros", "genre"=>"Fighter", "platform"=>"Gamecube", "image_url"=>"https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-video-game-sample-pack_940x1530.png?v=1628541839", "grocery"=>{}}
+  [1m[36mGrocery Load (0.4ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 1.3ms | Allocations: 17439)
+
+
+Started GET "/comments" for ::1 at 2022-09-21 21:07:57 -0400
+Processing by CommentsController#index as */*
+  Parameters: {"title"=>"Super Smash Bros", "genre"=>"Fighter", "platform"=>"Gamecube", "image_url"=>"https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-video-game-sample-pack_940x1530.png?v=1628541839", "comment"=>{}}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.5ms | Allocations: 16434)
+
+
+Started GET "/comments/1" for ::1 at 2022-09-21 21:08:02 -0400
+Processing by CommentsController#show as */*
+  Parameters: {"title"=>"Super Smash Bros", "genre"=>"Fighter", "platform"=>"Gamecube", "image_url"=>"https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-video-game-sample-pack_940x1530.png?v=1628541839", "id"=>"1", "comment"=>{}}
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `show'
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 1262)
+
+
+Started GET "/comments/3" for ::1 at 2022-09-21 21:08:05 -0400
+Processing by CommentsController#show as */*
+  Parameters: {"title"=>"Super Smash Bros", "genre"=>"Fighter", "platform"=>"Gamecube", "image_url"=>"https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-video-game-sample-pack_940x1530.png?v=1628541839", "id"=>"3", "comment"=>{}}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `show'
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 598)
+
+
+Started GET "/groceries/3" for ::1 at 2022-09-21 21:08:09 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"title"=>"Super Smash Bros", "genre"=>"Fighter", "platform"=>"Gamecube", "image_url"=>"https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-video-game-sample-pack_940x1530.png?v=1628541839", "id"=>"3", "grocery"=>{}}
+  [1m[36mGrocery Load (1.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.2ms | Allocations: 776)
+
+
+Started POST "/comments" for ::1 at 2022-09-21 21:14:20 -0400
+Processing by CommentsController#create as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}}
+[31mUnpermitted parameters: :user_id, :grocery_id, :comment. Context: { controller: CommentsController, action: create, request: #<ActionDispatch::Request:0x00007fc5c7776ae8>, params: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "controller"=>"comments", "action"=>"create", "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}} }[0m
+Completed 422 Unprocessable Entity in 23ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 8780)
+
+
+Started POST "/comments" for ::1 at 2022-09-21 21:15:14 -0400
+Processing by CommentsController#create as */*
+  Parameters: {"content"=>"Is this still available?", "user"=>3, "grocery"=>5, "comment"=>{"content"=>"Is this still available?"}}
+[31mUnpermitted parameters: :user, :grocery, :comment. Context: { controller: CommentsController, action: create, request: #<ActionDispatch::Request:0x00007fc5d10b9ed0>, params: {"content"=>"Is this still available?", "user"=>3, "grocery"=>5, "controller"=>"comments", "action"=>"create", "comment"=>{"content"=>"Is this still available?"}} }[0m
+Completed 422 Unprocessable Entity in 10ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2057)
+
+
+Started POST "/comments" for ::1 at 2022-09-21 21:15:17 -0400
+Processing by CommentsController#create as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}}
+[31mUnpermitted parameters: :user_id, :grocery_id, :comment. Context: { controller: CommentsController, action: create, request: #<ActionDispatch::Request:0x00007fc5d10aae58>, params: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "controller"=>"comments", "action"=>"create", "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}} }[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2065)
+
+
+Started POST "/comments" for ::1 at 2022-09-21 21:16:04 -0400
+Processing by CommentsController#create as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}}
+[31mUnpermitted parameters: :user_id, :grocery_id, :comment. Context: { controller: CommentsController, action: create, request: #<ActionDispatch::Request:0x00007fc5c75f69e8>, params: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "controller"=>"comments", "action"=>"create", "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}} }[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2063)
+
+
+Started POST "/comments" for ::1 at 2022-09-21 21:16:14 -0400
+Processing by CommentsController#create as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>"3", "grocery_id"=>"5", "comment"=>{"content"=>"Is this still available?", "user_id"=>"3", "grocery_id"=>"5"}}
+[31mUnpermitted parameters: :user_id, :grocery_id, :comment. Context: { controller: CommentsController, action: create, request: #<ActionDispatch::Request:0x00007fc5f553f710>, params: {"content"=>"Is this still available?", "user_id"=>"3", "grocery_id"=>"5", "controller"=>"comments", "action"=>"create", "comment"=>{"content"=>"Is this still available?", "user_id"=>"3", "grocery_id"=>"5"}} }[0m
+Completed 422 Unprocessable Entity in 10ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2065)
+
+
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Started POST "/comments" for ::1 at 2022-09-21 21:17:22 -0400
+Processing by CommentsController#create as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}}
+[31mUnpermitted parameter: :comment. Context: { controller: CommentsController, action: create, request: #<ActionDispatch::Request:0x00007fc5d1164ad8>, params: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "controller"=>"comments", "action"=>"create", "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Is this still available?"], ["user_id", 3], ["grocery_id", 5], ["created_at", "2022-09-22 01:17:22.271504"], ["updated_at", "2022-09-22 01:17:22.271504"]]
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+Completed 201 Created in 35ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 25655)
+
+
+Started GET "/comments" for ::1 at 2022-09-21 21:17:33 -0400
+Processing by CommentsController#index as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}}
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.4ms | Allocations: 2935)
+
+
+Started GET "/comments/20" for ::1 at 2022-09-21 21:17:39 -0400
+Processing by CommentsController#show as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "id"=>"20", "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 715)
+
+
+Started GET "/comments/2" for ::1 at 2022-09-21 21:17:41 -0400
+Processing by CommentsController#show as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "id"=>"2", "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 591)
+
+
+Started GET "/comments/21" for ::1 at 2022-09-21 21:17:48 -0400
+Processing by CommentsController#show as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "id"=>"21", "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 591)
+
+
+Started GET "/comments/20" for ::1 at 2022-09-21 21:17:53 -0400
+Processing by CommentsController#show as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "id"=>"20", "comment"=>{"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5}}
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 591)
+
+
+Started GET "/groceries" for ::1 at 2022-09-21 21:18:02 -0400
+Processing by GroceriesController#index as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "grocery"=>{}}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1817)
+
+
+Started GET "/groceries/3" for ::1 at 2022-09-21 21:18:08 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"content"=>"Is this still available?", "user_id"=>3, "grocery_id"=>5, "id"=>"3", "grocery"=>{}}
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 725)
+
+
+Started POST "/groceries" for ::1 at 2022-09-21 21:19:05 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "name": "Ribeye Steak",
+    "price": 20,
+    "quantity": "5 ounces",
+    "store": "Wegmans",
+    "date": "2022-09-21",
+}
+Processing by GroceriesController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/groceries_controller.rb:51:in `grocery_params'
+app/controllers/groceries_controller.rb:17:in `create'
+Started POST "/groceries" for ::1 at 2022-09-21 21:20:08 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "name": "Ribeye Steak",
+    "price": 20,
+    "quantity": "5 ounces",
+    "store": "Wegmans",
+    "date": "2022-09-21",
+}
+Processing by GroceriesController#create as */*
+Completed 400 Bad Request in 0ms (Allocations: 156)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/groceries_controller.rb:51:in `grocery_params'
+app/controllers/groceries_controller.rb:19:in `create'
+Started POST "/groceries" for ::1 at 2022-09-21 21:23:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "name": "Ribeye Steak",
+    "price": 20,
+    "quantity": "5 ounces",
+    "store": "Wegmans",
+    "date": "2022-09-21",
+}
+Processing by GroceriesController#create as */*
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms | Allocations: 14917)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/groceries_controller.rb:51:in `grocery_params'
+app/controllers/groceries_controller.rb:17:in `create'
+Started POST "/groceries" for ::1 at 2022-09-21 21:24:45 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "name": "Ribeye Steak",
+    "price": 20,
+    "quantity": "5 ounces",
+    "store": "Wegmans",
+    "date": "2022-09-21",
+}
+Processing by GroceriesController#create as */*
+Completed 400 Bad Request in 0ms (Allocations: 159)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/groceries_controller.rb:51:in `grocery_params'
+app/controllers/groceries_controller.rb:17:in `create'
+Started POST "/groceries" for ::1 at 2022-09-21 21:26:42 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "name": "Ribeye Steak",
+    "price": 20,
+    "quantity": "5 ounces",
+    "store": "Wegmans",
+    "date": "2022-09-21",
+}
+Processing by GroceriesController#create as */*
+Completed 400 Bad Request in 0ms (Allocations: 158)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/groceries_controller.rb:51:in `grocery_params'
+app/controllers/groceries_controller.rb:17:in `create'
+Started POST "/groceries" for ::1 at 2022-09-21 21:27:10 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "name": "Ribeye Steak",
+    "price": 20,
+    "quantity": "5 ounces",
+    "store": "Wegmans",
+    "date": "2022-09-21",
+}
+Processing by GroceriesController#create as */*
+Completed 400 Bad Request in 0ms (Allocations: 128)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/groceries_controller.rb:51:in `grocery_params'
+app/controllers/groceries_controller.rb:17:in `create'
+Started POST "/groceries" for ::1 at 2022-09-21 21:27:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "name": "Ribeye Steak",
+    "price": 20,
+    "quantity": "5 ounces",
+    "store": "Wegmans",
+    "date": "2022-09-21",
+}
+Processing by GroceriesController#create as */*
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms | Allocations: 14916)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/groceries_controller.rb:51:in `grocery_params'
+app/controllers/groceries_controller.rb:17:in `create'
+Started POST "/groceries" for ::1 at 2022-09-21 21:27:38 -0400
+Processing by GroceriesController#create as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+[31mUnpermitted parameter: :grocery. Context: { controller: GroceriesController, action: create, request: #<ActionDispatch::Request:0x00007f942dc3bb30>, params: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "controller"=>"groceries", "action"=>"create", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groceries_controller.rb:17:in `create'
+  [1m[36mGrocery Create (0.4ms)[0m  [1m[32mINSERT INTO "groceries" ("name", "price", "quantity", "store", "date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ribeye Steak"], ["price", 20], ["quantity", "5 ounces"], ["store", "Wegmans"], ["date", "2022-09-21"], ["created_at", "2022-09-22 01:27:38.092414"], ["updated_at", "2022-09-22 01:27:38.092414"]]
+  ↳ app/controllers/groceries_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groceries_controller.rb:17:in `create'
+Completed 201 Created in 17ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 17900)
+
+
+Started GET "/groceries" for ::1 at 2022-09-21 21:28:04 -0400
+Processing by GroceriesController#index as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1983)
+
+
+Started GET "/groceries/8" for ::1 at 2022-09-21 21:28:08 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "id"=>"8", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+  [1m[36mGrocery Load (0.4ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 24ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 1290)
+
+
+Started GET "/groceries/9" for ::1 at 2022-09-21 21:28:11 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "id"=>"9", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"5 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 37ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 633)
+
+
+Started PATCH "/groceries/9" for ::1 at 2022-09-21 21:28:28 -0400
+Processing by GroceriesController#update as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "id"=>"9", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+[31mUnpermitted parameters: :id, :grocery. Context: { controller: GroceriesController, action: update, request: #<ActionDispatch::Request:0x00007f942dc71eb0>, params: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "controller"=>"groceries", "action"=>"update", "id"=>"9", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groceries_controller.rb:30:in `update'
+  [1m[36mGrocery Update (1.9ms)[0m  [1m[33mUPDATE "groceries" SET "quantity" = ?, "updated_at" = ? WHERE "groceries"."id" = ?[0m  [["quantity", "10 ounces"], ["updated_at", "2022-09-22 01:28:28.659299"], ["id", 9]]
+  ↳ app/controllers/groceries_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groceries_controller.rb:30:in `update'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 2497)
+
+
+Started GET "/groceries/" for ::1 at 2022-09-21 21:28:35 -0400
+Processing by GroceriesController#index as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.3ms | Allocations: 1900)
+
+
+Started GET "/groceries/9" for ::1 at 2022-09-21 21:28:41 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "id"=>"9", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 631)
+
+
+Started DELETE "/groceries/9" for ::1 at 2022-09-21 21:28:48 -0400
+Processing by GroceriesController#destroy as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "id"=>"9", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groceries_controller.rb:39:in `destroy'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 9]]
+  ↳ app/controllers/groceries_controller.rb:39:in `destroy'
+  [1m[36mGrocery Destroy (0.3ms)[0m  [1m[31mDELETE FROM "groceries" WHERE "groceries"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/groceries_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groceries_controller.rb:39:in `destroy'
+Completed 204 No Content in 28ms (ActiveRecord: 1.5ms | Allocations: 10558)
+
+
+Started GET "/groceries/9" for ::1 at 2022-09-21 21:28:52 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "id"=>"9", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 404 Not Found in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 493)
+
+
+Started GET "/groceries/" for ::1 at 2022-09-21 21:28:55 -0400
+Processing by GroceriesController#index as */*
+  Parameters: {"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21", "grocery"=>{"name"=>"Ribeye Steak", "price"=>20, "quantity"=>"10 ounces", "store"=>"Wegmans", "date"=>"2022-09-21"}}
+  [1m[36mGrocery Load (0.4ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 1744)
+
+
+Started POST "/users/" for ::1 at 2022-09-21 21:29:57 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"username4", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"username4"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f942e5b4478>, params: {"username"=>"username4", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"username4"}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "username4"], ["password_digest", "[FILTERED]"], ["created_at", "2022-09-22 01:29:57.758953"], ["updated_at", "2022-09-22 01:29:57.758953"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 284ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 15392)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/me" for 127.0.0.1 at 2022-09-21 21:49:58 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 4ms (Views: 0.3ms | Allocations: 795)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:01:50 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 1ms (Views: 0.1ms | Allocations: 765)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:05:14 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 1ms (Views: 0.1ms | Allocations: 765)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:05:43 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 1ms (Views: 0.1ms | Allocations: 765)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:11:39 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username1", "password"=>"[FILTERED]", "session"=>{"username"=>"username1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 276ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 1502)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:12:41 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 895)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:12:45 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 786)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:17:22 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 216)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:17:22 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 205)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:17:31 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"ohsean812", "password"=>"[FILTERED]", "session"=>{"username"=>"ohsean812", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ohsean812"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 507)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:17:40 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username1", "password"=>"[FILTERED]", "session"=>{"username"=>"username1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 284ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 828)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:18:56 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 778)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:19:00 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 216)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:19:00 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 221)
+
+
+Started GET "/" for ::1 at 2022-09-21 22:20:29 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"username"=>"username4", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "welcome"=>{"username"=>"username4", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  Rendering /Users/seanoh/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/seanoh/.rvm/gems/ruby-2.7.4/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 565)
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 5182)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:20:47 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 308)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:20:54 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username1", "password"=>"[FILTERED]", "session"=>{"username"=>"username1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 284ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 814)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:21:00 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:21:00 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 215)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:22:10 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:37:10 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 2ms (Views: 0.3ms | Allocations: 302)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:37:42 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username1", "password"=>"[FILTERED]", "session"=>{"username"=>"username1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 286ms (Views: 1.5ms | ActiveRecord: 1.6ms | Allocations: 955)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:37:53 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 228)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:37:53 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 229)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-09-21 22:38:12 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"username5", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"username5"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f942d8c5a50>, params: {"username"=>"username5", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"username5"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "username5"], ["password_digest", "[FILTERED]"], ["created_at", "2022-09-22 02:38:12.735122"], ["updated_at", "2022-09-22 02:38:12.735122"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 285ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 2138)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:38:28 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username5", "password"=>"[FILTERED]", "session"=>{"username"=>"username5", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username5"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 280ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:38:33 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 220)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:38:33 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 219)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:39:53 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 316)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:40:02 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username1", "password"=>"[FILTERED]", "session"=>{"username"=>"username1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 282ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 812)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:40:06 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 220)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:40:06 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 217)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:40:21 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 310)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:40:26 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 310)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 22:40:50 -0400
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 310)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:40:58 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username1", "password"=>"[FILTERED]", "session"=>{"username"=>"username1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 283ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 812)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:41:03 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 218)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:41:03 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 219)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:44:33 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username1", "password"=>"[FILTERED]", "session"=>{"username"=>"username1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 268ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 815)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:44:59 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 218)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:44:59 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 217)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-09-21 22:45:15 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"username6", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"username6"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f943c858220>, params: {"username"=>"username6", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"username6"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "username6"], ["password_digest", "[FILTERED]"], ["created_at", "2022-09-22 02:45:16.088471"], ["updated_at", "2022-09-22 02:45:16.088471"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 288ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 2144)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 22:45:30 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username6", "password"=>"[FILTERED]", "session"=>{"username"=>"username6", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username6"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 284ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 814)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:45:43 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 216)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 22:45:43 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 217)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-21 23:09:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#get_logged_in as */*
+Completed 404 Not Found in 13ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 16846)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-09-21 23:10:07 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"username7", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"username7"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fa406cb5618>, params: {"username"=>"username7", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"username7"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "username7"], ["password_digest", "[FILTERED]"], ["created_at", "2022-09-22 03:10:07.573358"], ["updated_at", "2022-09-22 03:10:07.573358"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 292ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 17902)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 23:10:16 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"username7", "password"=>"[FILTERED]", "session"=>{"username"=>"username7", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "username7"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 201 Created in 283ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1040)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 23:10:26 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 23:10:26 -0400
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 216)
+
+
