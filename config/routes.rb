@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :comments, only: [:index, :show, :create]
   resources :groceries, only: [:index, :show, :create, :update, :destroy]
   resources :users, only: [:create]
+  resources :grocery_comments, only: [:show]
 
   post '/signup', to: "users#create"
   post '/login', to: "sessions#create"

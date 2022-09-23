@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import GroceryComments from "./GroceryComments";
 
-function GroceryDetail( {user} ) {
+function GroceryDetail( {user, updateCommentsMasterState} ) {
 
     const history = useHistory()
     const params = useParams()
@@ -18,20 +18,19 @@ function GroceryDetail( {user} ) {
     const [comments, setComments] = useState([])
 
     useEffect(() => {
-        fetch(`/comments/${params.id}`)
+        fetch(`/grocery_comments/${params.id}`)
         .then(resp => resp.json())
         .then(showComments => setComments(showComments))
     }, [params.id])
 
 
-    // const sortedComments = [...comments].sort((a,b) => b.id - a.id)
-    // const renderComments = sortedComments.map((comment) => <GroceryComments user={user} comment={comment} key={comment.id} />)
-
 
     const [content, setContent] = useState("")
 
+
     function handleSubmit(e) {
         e.preventDefault()
+        setContent("")
         if (user) {
             fetch('/comments', {
                 method: "POST",
@@ -44,17 +43,22 @@ function GroceryDetail( {user} ) {
             })
                 .then(resp => {
                     if (resp.ok) {
-                        resp.json().then(showComments => {
-                            setComments(comments => [...comments, showComments])
-                            // updateCommentsMasterState(showComments)
+                        resp.json().then(returnComment => {
+                            setComments(comments => [...comments, returnComment])
+                            updateCommentsMasterState(returnComment)
                         })
                     }
                 })
         } else {
             history.push('/unauthorized')
         }
+        setContent("")
         e.target.reset()
     }
+
+    const sortedComments = [...comments].sort((a,b) => b.id - a.id)
+    
+    const renderComments = sortedComments.map((comment) => <GroceryComments user={user} comment={comment} key={comment.id} />)
 
 
     return (
@@ -68,7 +72,7 @@ function GroceryDetail( {user} ) {
             <h1>Purchase Date: {grocery.date}</h1>
             
             <h2>### This is where the rendered comments should appear ###</h2>
-            {/* {renderComments} */}
+            {renderComments}
 
             <form onSubmit={handleSubmit}>
                 <label htmlFor="chat">Chat </label>

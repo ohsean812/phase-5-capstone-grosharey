@@ -4,9 +4,7 @@ function GroceryComments( {user, comment} ) {
 
     return (
         <div>
-            <h1>hello grocery comments!</h1>
-            {user}
-            {comment}
+            <h4>Please display user chats</h4>
         </div>
     )
 }

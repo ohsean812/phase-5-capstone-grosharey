@@ -3355,3 +3355,2738 @@ Processing by CommentsController#show as */*
 Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 619)
 
 
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:18:21 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:18:21 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 778)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 2294)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:27:38 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:27:38 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:27:38 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.8ms | Allocations: 3452)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 806)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 2332)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:28:14 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:28:14 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:28:14 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Processing by CommentsController#index as */*
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 987)
+
+
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 3796)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.5ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 2332)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:28:19 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:28:19 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:28:19 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 3894)
+
+
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 3435)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 2294)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:28:23 -0400
+Started GET "/comments/1" for 127.0.0.1 at 2022-09-22 21:28:23 -0400
+Processing by CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `show'
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 650)
+
+
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 667)
+
+
+Started POST "/comments" for 127.0.0.1 at 2022-09-22 21:28:31 -0400
+Processing by CommentsController#create as */*
+  Parameters: {"content"=>"how about this one", "user_id"=>1, "grocery_id"=>"1", "comment"=>{"content"=>"how about this one", "user_id"=>1, "grocery_id"=>"1"}}
+[31mUnpermitted parameter: :comment. Context: { controller: CommentsController, action: create, request: #<ActionDispatch::Request:0x00007f79ae04e438>, params: {"content"=>"how about this one", "user_id"=>1, "grocery_id"=>"1", "controller"=>"comments", "action"=>"create", "comment"=>{"content"=>"how about this one", "user_id"=>1, "grocery_id"=>"1"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "how about this one"], ["user_id", 1], ["grocery_id", 1], ["created_at", "2022-09-23 01:28:31.132508"], ["updated_at", "2022-09-23 01:28:31.132508"]]
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+Completed 201 Created in 13ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 3435)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:31:31 -0400
+Started GET "/comments/1" for 127.0.0.1 at 2022-09-22 21:31:31 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:31:31 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:31:31 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:31:31 -0400
+Processing by CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 620)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 828)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+Processing by UsersController#get_logged_in as */*
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 2519)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 983)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3441)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:32:06 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:32:06 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:32:06 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 803)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 2302)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 3409)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:38:12 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:38:12 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:38:12 -0400
+Processing by CommentsController#index as */*
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2447)
+
+
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 6235)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 801)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:38:15 -0400
+Started GET "/comments/1" for 127.0.0.1 at 2022-09-22 21:38:15 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.4ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 671)
+
+
+Processing by CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `show'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 620)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:46:10 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 21:46:10 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:46:10 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:46:10 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:46:10 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.5ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 803)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/grocery_comments/1"):
+  
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 824)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 2340)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 3438)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:53:50 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:53:50 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:53:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroceriesController#index as */*
+Processing by UsersController#get_logged_in as */*
+Processing by CommentsController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 22.8ms | ActiveRecord: 0.5ms | Allocations: 68650)
+
+
+Completed 200 OK in 37ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 69612)
+
+
+Completed 200 OK in 39ms (Views: 17.8ms | ActiveRecord: 0.6ms | Allocations: 72897)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 21:53:52 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:53:52 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1769)
+
+
+  
+NameError (uninitialized constant GroceryCommentsController::Review):
+  
+app/controllers/grocery_comments_controller.rb:6:in `show'
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 965)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:54:03 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:54:03 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 21:54:03 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:54:03 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:54:03 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3624)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1740)
+
+
+  
+NameError (uninitialized constant GroceryCommentsController::Review):
+  
+app/controllers/grocery_comments_controller.rb:6:in `show'
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 842)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 2524)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:54:06 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:54:06 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:54:06 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 3645)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Processing by GroceriesController#index as */*
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 965)
+
+
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 2815)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:54:21 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:54:21 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:54:21 -0400
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 3541)
+
+
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 5275)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 777)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 21:54:31 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:54:31 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1740)
+
+
+  
+NameError (uninitialized constant GroceryCommentsController::Review):
+  
+app/controllers/grocery_comments_controller.rb:6:in `show'
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 814)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:58:27 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:58:27 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:58:27 -0400
+Processing by CommentsController#index as */*
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 4.7ms | ActiveRecord: 0.7ms | Allocations: 9282)
+
+
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 5.4ms | ActiveRecord: 0.7ms | Allocations: 15413)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 4332)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 21:58:28 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:58:28 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:7:in `show'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.4ms | Allocations: 1928)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 823)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:58:41 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:58:41 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:58:41 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 21:58:41 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:58:41 -0400
+Processing by CommentsController#index as */*
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by GroceriesController#index as */*
+Processing by UsersController#get_logged_in as */*
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 11410)
+
+
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 15ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 12799)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 14899)
+
+
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+Completed 200 OK in 25ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 21617)
+
+
+  ↳ app/controllers/grocery_comments_controller.rb:7:in `show'
+Completed 200 OK in 24ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 21418)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 21:58:44 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 21:58:44 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 21:58:44 -0400
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 2534)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 3632)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 798)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 21:58:46 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 21:58:46 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 854)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1300)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 22:01:25 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 22:01:25 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:01:25 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:01:25 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:01:25 -0400
+Processing by CommentsController#index as */*
+Processing by UsersController#get_logged_in as */*
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 7427)
+
+
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 14125)
+
+
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 18ms (Views: 4.9ms | ActiveRecord: 0.5ms | Allocations: 14268)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 5917)
+
+
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 7300)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 22:43:20 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:43:20 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:43:20 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 22:43:20 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:43:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroceryCommentsController#show as */*
+Processing by CommentsController#index as */*
+Processing by GroceriesController#index as */*
+Processing by UsersController#get_logged_in as */*
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 41953)
+
+
+Completed 200 OK in 31ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 44712)
+
+
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 47ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 68245)
+
+
+Completed 200 OK in 55ms (Views: 21.7ms | ActiveRecord: 1.0ms | Allocations: 71725)
+
+
+Completed 200 OK in 60ms (Views: 25.6ms | ActiveRecord: 0.3ms | Allocations: 75741)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:43:31 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:43:31 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:43:31 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 22:43:31 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 22:43:31 -0400
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 2544)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 3641)
+
+
+Processing by UsersController#get_logged_in as */*
+Processing by GroceryCommentsController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1032)
+
+
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 1855)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 856)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:43:34 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:43:34 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:43:34 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 3648)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 820)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 2520)
+
+
+Started GET "/groceries/16" for 127.0.0.1 at 2022-09-22 22:43:36 -0400
+Started GET "/grocery_comments/16" for 127.0.0.1 at 2022-09-22 22:43:36 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 16]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 688)
+
+
+Started GET "/groceries/17" for 127.0.0.1 at 2022-09-22 22:43:43 -0400
+Started GET "/grocery_comments/17" for 127.0.0.1 at 2022-09-22 22:43:43 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 853)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 17]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/groceries/17" for 127.0.0.1 at 2022-09-22 22:43:51 -0400
+Started GET "/grocery_comments/17" for 127.0.0.1 at 2022-09-22 22:43:51 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 17]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 676)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started GET "/groceries/16" for 127.0.0.1 at 2022-09-22 22:43:56 -0400
+Started GET "/grocery_comments/16" for 127.0.0.1 at 2022-09-22 22:43:56 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 16]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 667)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 815)
+
+
+Started GET "/groceries/14" for 127.0.0.1 at 2022-09-22 22:43:58 -0400
+Started GET "/grocery_comments/14" for 127.0.0.1 at 2022-09-22 22:43:58 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 831)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 14]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/groceries/10" for 127.0.0.1 at 2022-09-22 22:44:00 -0400
+Started GET "/grocery_comments/10" for 127.0.0.1 at 2022-09-22 22:44:00 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 815)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 10]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/groceries/8" for 127.0.0.1 at 2022-09-22 22:44:03 -0400
+Started GET "/grocery_comments/8" for 127.0.0.1 at 2022-09-22 22:44:03 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 8]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Processing by GroceriesController#show as */*
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 1101)
+
+
+  Parameters: {"id"=>"8"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 899)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 22:44:08 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:08 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 22:44:08 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:08 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:08 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 880)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 794)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1316)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 2515)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 3603)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:09 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:09 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:09 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 3611)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 2487)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:10 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:10 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:10 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 3606)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 798)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 2489)
+
+
+Started GET "/groceries/8" for 127.0.0.1 at 2022-09-22 22:44:12 -0400
+Started GET "/grocery_comments/8" for 127.0.0.1 at 2022-09-22 22:44:12 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 848)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 8]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 880)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:14 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:14 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:14 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 781)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 3611)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 2483)
+
+
+Started GET "/groceries/10" for 127.0.0.1 at 2022-09-22 22:44:16 -0400
+Started GET "/grocery_comments/10" for 127.0.0.1 at 2022-09-22 22:44:16 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 814)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 10]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/groceries/14" for 127.0.0.1 at 2022-09-22 22:44:18 -0400
+Started GET "/grocery_comments/14" for 127.0.0.1 at 2022-09-22 22:44:18 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"14"}
+Processing by GroceriesController#show as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 14]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 670)
+
+
+  Parameters: {"id"=>"14"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 859)
+
+
+Started GET "/grocery_comments/16" for 127.0.0.1 at 2022-09-22 22:44:22 -0400
+Started GET "/groceries/16" for 127.0.0.1 at 2022-09-22 22:44:22 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 16]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1064)
+
+
+Started GET "/groceries/17" for 127.0.0.1 at 2022-09-22 22:44:24 -0400
+Started GET "/grocery_comments/17" for 127.0.0.1 at 2022-09-22 22:44:24 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 17]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 865)
+
+
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1028)
+
+
+Started GET "/groceries/7" for 127.0.0.1 at 2022-09-22 22:44:27 -0400
+Started GET "/grocery_comments/7" for 127.0.0.1 at 2022-09-22 22:44:27 -0400
+Processing by GroceryCommentsController#show as */*
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"7"}
+  Parameters: {"id"=>"7"}
+  [1m[36mGrocery Load (0.3ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 7]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1444)
+
+
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 1444)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:29 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:29 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:29 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 3807)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2501)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 779)
+
+
+Started GET "/grocery_comments/6" for 127.0.0.1 at 2022-09-22 22:44:30 -0400
+Started GET "/groceries/6" for 127.0.0.1 at 2022-09-22 22:44:30 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 6]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 817)
+
+
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1296)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:32 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:32 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:32 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Processing by UsersController#get_logged_in as */*
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 3623)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 2998)
+
+
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 2156)
+
+
+Started GET "/grocery_comments/5" for 127.0.0.1 at 2022-09-22 22:44:35 -0400
+Started GET "/groceries/5" for 127.0.0.1 at 2022-09-22 22:44:35 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 855)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 5]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 773)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:37 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:37 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:37 -0400
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 2516)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3629)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 791)
+
+
+Started GET "/groceries/4" for 127.0.0.1 at 2022-09-22 22:44:38 -0400
+Started GET "/grocery_comments/4" for 127.0.0.1 at 2022-09-22 22:44:38 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 837)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 4]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 987)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:40 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:40 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:40 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 774)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3616)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 2481)
+
+
+Started GET "/grocery_comments/3" for 127.0.0.1 at 2022-09-22 22:44:41 -0400
+Started GET "/groceries/3" for 127.0.0.1 at 2022-09-22 22:44:41 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 3]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 887)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 829)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:42 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:42 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:42 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 790)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2493)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 3607)
+
+
+Started GET "/grocery_comments/2" for 127.0.0.1 at 2022-09-22 22:44:43 -0400
+Started GET "/groceries/2" for 127.0.0.1 at 2022-09-22 22:44:43 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 2]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1427)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 815)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:46 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:46 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:46 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 789)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3621)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 2485)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 22:44:47 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 22:44:47 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:46:in `set_grocery'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 835)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1300)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:44:48 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:44:48 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:44:48 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 803)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 3613)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 2489)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:47:00 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:47:00 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:47:00 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 782)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+Processing by CommentsController#index as */*
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 3097)
+
+
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 5628)
+
+
+Started GET "/grocery_comments/1" for ::1 at 2022-09-22 22:47:11 -0400
+Processing by GroceryCommentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1297)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 22:47:17 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 22:47:17 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 22:47:17 -0400
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 2506)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 792)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 3611)
+
+
+Started GET "/groceries/17" for 127.0.0.1 at 2022-09-22 23:08:51 -0400
+Started GET "/grocery_comments/17" for 127.0.0.1 at 2022-09-22 23:08:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroceryCommentsController#show as */*
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"17"}
+  Parameters: {"id"=>"17"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms | Allocations: 37265)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009268>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 17]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 39ms (Views: 12.0ms | ActiveRecord: 0.7ms | Allocations: 51044)
+
+
+Started POST "/comments" for 127.0.0.1 at 2022-09-22 23:09:04 -0400
+Processing by CommentsController#create as */*
+  Parameters: {"content"=>"This is by far my favorite game!", "user_id"=>1, "grocery_id"=>"17", "comment"=>{"content"=>"This is by far my favorite game!", "user_id"=>1, "grocery_id"=>"17"}}
+[31mUnpermitted parameter: :comment. Context: { controller: CommentsController, action: create, request: #<ActionDispatch::Request:0x00007fb11a6a2958>, params: {"content"=>"This is by far my favorite game!", "user_id"=>1, "grocery_id"=>"17", "controller"=>"comments", "action"=>"create", "comment"=>{"content"=>"This is by far my favorite game!", "user_id"=>1, "grocery_id"=>"17"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "grocery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "This is by far my favorite game!"], ["user_id", 1], ["grocery_id", 17], ["created_at", "2022-09-23 03:09:04.299330"], ["updated_at", "2022-09-23 03:09:04.299330"]]
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `create'
+Completed 201 Created in 45ms (Views: 0.3ms | ActiveRecord: 3.6ms | Allocations: 36018)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:09:08 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:09:08 -0400
+Started GET "/groceries/17" for 127.0.0.1 at 2022-09-22 23:09:08 -0400
+Started GET "/grocery_comments/17" for 127.0.0.1 at 2022-09-22 23:09:08 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:09:08 -0400
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2608)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 3799)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2638)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009538>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 17]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 909)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 902)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:09:13 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:09:13 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:09:13 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 781)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 2315)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3707)
+
+
+Started GET "/groceries/17" for 127.0.0.1 at 2022-09-22 23:15:24 -0400
+Started GET "/grocery_comments/17" for 127.0.0.1 at 2022-09-22 23:15:24 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms | Allocations: 2774)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009740>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 17]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 801)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:15:28 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:15:28 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:15:28 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 3757)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Processing by GroceriesController#index as */*
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1023)
+
+
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 2799)
+
+
+Started GET "/grocery_comments/16" for 127.0.0.1 at 2022-09-22 23:15:29 -0400
+Started GET "/groceries/16" for 127.0.0.1 at 2022-09-22 23:15:29 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 2654)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x000000000098f8>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 16]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 688)
+
+
+Started GET "/groceries/16" for 127.0.0.1 at 2022-09-22 23:16:35 -0400
+Started GET "/grocery_comments/16" for 127.0.0.1 at 2022-09-22 23:16:35 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2614)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009998>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 16]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 658)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 2613)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009a38>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1318)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 873)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 3736)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2306)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:16:37 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2611)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009b50>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1299)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 778)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3769)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 2307)
+
+
+Started GET "/groceries/16" for 127.0.0.1 at 2022-09-22 23:16:38 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:16:38 -0400
+Started GET "/grocery_comments/16" for 127.0.0.1 at 2022-09-22 23:16:38 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:16:38 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:16:38 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 2825)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009ce0>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 3717)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 16]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Processing by UsersController#get_logged_in as */*
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 861)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1015)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 2306)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:16:42 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:16:42 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 2619)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009dd0>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1299)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:17:18 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:17:18 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3842)
+
+
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 3260)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009e98>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:17:20 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:17:20 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 2610)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009f10>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1299)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:17:20 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2610)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x00000000009fb0>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:17:20 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1299)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:17:31 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:17:31 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Processing by GroceryCommentsController#show as */*
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2610)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000a078>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 14ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 13103)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:17:31 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:17:31 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1303)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2610)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000a118>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:17:31 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1299)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:17:31 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2610)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000a1b8>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:18:58 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:18:58 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:18:58 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 775)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 2362)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 3705)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:18:58 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:18:58 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:18:58 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 3707)
+
+
+Processing by GroceriesController#index as */*
+Processing by UsersController#get_logged_in as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 2604)
+
+
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 2895)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:18:58 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:18:58 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:18:58 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 3708)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 2503)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 776)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:19:13 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:19:13 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:19:13 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 3763)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 979)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 2306)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:19:14 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:19:14 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:19:14 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 3722)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 782)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 2306)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:19:14 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:19:14 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:19:14 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 3721)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 785)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 2306)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:21:14 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:21:14 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:21:14 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 3726)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 783)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 2306)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:21:16 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:21:16 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:21:16 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 3719)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 785)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 2306)
+
+
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:21:16 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:21:16 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:21:16 -0400
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 2313)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 3701)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 769)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:22:39 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:22:39 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 2640)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000a6e0>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1299)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:22:39 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:22:39 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 3497)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000a7a8>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3530)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:22:46 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:22:46 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:22:46 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 783)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+Processing by CommentsController#index as */*
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3044)
+
+
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 5617)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:22:47 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:22:47 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:22:47 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 794)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3709)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 2306)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:22:47 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:22:47 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:22:47 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 990)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 3744)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 2306)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:23:05 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:23:05 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1319)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 2611)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000aa00>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:23:05 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1410)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:23:05 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2610)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000aaa0>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:23:11 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:23:11 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:23:11 -0400
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 3705)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 907)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 2346)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:23:18 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:23:18 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 2626)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000abb8>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1299)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:24:38 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:24:38 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 3056)
+
+
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000ac80>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 16ms (Views: 16.1ms | ActiveRecord: 0.1ms | Allocations: 15583)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:24:40 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:24:40 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 2623)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000acf8>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1299)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:24:40 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:24:40 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by GroceryCommentsController#show as */*
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2851)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000adc0>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 13119)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:24:42 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:24:42 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:24:42 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:24:42 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:24:42 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1347)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2627)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000ae60>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3741)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 2510)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 779)
+
+
+Started GET "/groceries" for ::1 at 2022-09-22 23:25:29 -0400
+Processing by GroceriesController#index as */*
+  Parameters: {"name"=>"Wagyu Steak", "price"=>15, "quantity"=>"2 ounces", "store"=>"Giant", "grocery"=>{"name"=>"Wagyu Steak", "price"=>15, "quantity"=>"2 ounces", "store"=>"Giant"}}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 2307)
+
+
+Started GET "/groceries/1" for ::1 at 2022-09-22 23:25:33 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"name"=>"Wagyu Steak", "price"=>15, "quantity"=>"2 ounces", "store"=>"Giant", "id"=>"1", "grocery"=>{"name"=>"Wagyu Steak", "price"=>15, "quantity"=>"2 ounces", "store"=>"Giant"}}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 2611)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000afa0>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Started GET "/groceries/1" for ::1 at 2022-09-22 23:26:58 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"name"=>"Wagyu Steak", "price"=>15, "quantity"=>"2 ounces", "store"=>"Giant", "id"=>"1", "grocery"=>{"name"=>"Wagyu Steak", "price"=>15, "quantity"=>"2 ounces", "store"=>"Giant"}}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:51:in `set_grocery'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2610)
+
+
+  
+NameError (undefined local variable or method `grocery' for #<GroceriesController:0x0000000000b018>
+Did you mean?  grocery_url):
+  
+app/controllers/groceries_controller.rb:14:in `show'
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:28:29 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:28:29 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:28:29 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:28:29 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:28:29 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by UsersController#get_logged_in as */*
+Processing by CommentsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 7580)
+
+
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 12162)
+
+
+Completed 200 OK in 18ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 14266)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 6958)
+
+
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 7748)
+
+
+Started GET "/groceries/1" for ::1 at 2022-09-22 23:28:56 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"name"=>"Wagyu Steak", "price"=>15, "quantity"=>"2 ounces", "store"=>"Giant", "id"=>"1", "grocery"=>{"name"=>"Wagyu Steak", "price"=>15, "quantity"=>"2 ounces", "store"=>"Giant"}}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1001)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:32:27 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:32:27 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 6099)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 5007)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:32:49 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:32:49 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:32:49 -0400
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2373)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 3791)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 4463)
+
+
+Started GET "/groceries/16" for 127.0.0.1 at 2022-09-22 23:32:50 -0400
+Started GET "/grocery_comments/16" for 127.0.0.1 at 2022-09-22 23:32:50 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1019)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 16]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/grocery_comments/10" for 127.0.0.1 at 2022-09-22 23:32:55 -0400
+Started GET "/groceries/10" for 127.0.0.1 at 2022-09-22 23:32:55 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 10]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 857)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 987)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:32:58 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:32:58 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1032)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1300)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+Processing by UsersController#get_logged_in as */*
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 1982)
+
+
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1641)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2369)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by CommentsController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 4121)
+
+
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 5090)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1043)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 830)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 2308)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1329)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 3762)
+
+
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:35:05 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 2339)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by GroceryCommentsController#show as */*
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1037)
+
+
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Processing by CommentsController#index as */*
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1645)
+
+
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 3941)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:35:30 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:35:30 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1311)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1000)
+
+
+Started GET "/groceries/5" for 127.0.0.1 at 2022-09-22 23:35:32 -0400
+Started GET "/grocery_comments/5" for 127.0.0.1 at 2022-09-22 23:35:32 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 5]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 776)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1000)
+
+
+Started GET "/grocery_comments/14" for 127.0.0.1 at 2022-09-22 23:35:35 -0400
+Started GET "/groceries/14" for 127.0.0.1 at 2022-09-22 23:35:35 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 14]]
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"14"}
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 670)
+
+
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1216)
+
+
+Started GET "/groceries/17" for 127.0.0.1 at 2022-09-22 23:35:38 -0400
+Started GET "/grocery_comments/17" for 127.0.0.1 at 2022-09-22 23:35:38 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 17]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 775)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1000)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:36:03 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:36:03 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1315)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1000)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:36:12 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:36:12 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:36:12 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:36:12 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:36:12 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1000)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 3921)
+
+
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1905)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.2ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Processing by GroceryCommentsController#show as */*
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2546)
+
+
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1300)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:36:32 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:36:32 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1081)
+
+
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1300)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:36:32 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:36:32 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+Processing by GroceryCommentsController#show as */*
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1244)
+
+
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1303)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:36:32 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:36:32 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1302)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1001)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:36:34 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:36:34 -0400
+Started GET "/comments" for 127.0.0.1 at 2022-09-22 23:36:34 -0400
+Started GET "/groceries" for 127.0.0.1 at 2022-09-22 23:36:34 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-22 23:36:34 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+Processing by GroceryCommentsController#show as */*
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1339)
+
+
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1307)
+
+
+Processing by GroceriesController#index as */*
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries"[0m
+  ↳ app/controllers/groceries_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 2306)
+
+
+Processing by UsersController#get_logged_in as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CommentsController#index as */*
+  ↳ app/controllers/users_controller.rb:14:in `get_logged_in'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1426)
+
+
+  ↳ app/controllers/comments_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 4244)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:36:39 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:36:39 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+  [1m[36mGrocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1622)
+
+
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1919)
+
+
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:36:39 -0400
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:36:39 -0400
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by GroceryCommentsController#show as */*
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1300)
+
+
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 2584)
+
+
+Started GET "/grocery_comments/1" for 127.0.0.1 at 2022-09-22 23:36:40 -0400
+Started GET "/groceries/1" for 127.0.0.1 at 2022-09-22 23:36:40 -0400
+Processing by GroceryCommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."grocery_id" = ?[0m  [["grocery_id", 1]]
+  ↳ app/controllers/grocery_comments_controller.rb:6:in `show'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1301)
+
+
+Processing by GroceriesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGrocery Load (0.1ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:52:in `set_grocery'
+  [1m[36mCACHE Grocery Load (0.0ms)[0m  [1m[34mSELECT "groceries".* FROM "groceries" WHERE "groceries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groceries_controller.rb:14:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1000)
+
+

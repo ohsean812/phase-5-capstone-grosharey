@@ -37,6 +37,20 @@ function App() {
     .then(() => history.push('/'))
   }
 
+  const [comments, setComments] = useState([])
+
+  function fetchAllComments() {
+    fetch('/comments')
+    .then(resp => resp.json())
+    .then(allComments => setComments(allComments))
+  }
+  useEffect(() => fetchAllComments(), [])
+
+  // Update state of App/Home when submitting comment from GroceryDetail
+  function updateCommentsMasterState(new_comment){
+    setComments((comments) => [...comments, new_comment])
+  }
+
 
   const [groceries, setGroceries] = useState([])
 
@@ -60,7 +74,7 @@ function App() {
         </Route>
 
         <Route exact path = "/groceries/:id">
-          <GroceryDetail user={user} />
+          <GroceryDetail user={user} updateCommentsMasterState={updateCommentsMasterState} />
         </Route>
 
         <Route exact path = "/groceries">
