@@ -12,9 +12,9 @@ function NavBar( {user, handleLogout} ) {
 
     return (
         <div>
-            <NavLink path to ="/">Logo</NavLink>
-            <NavLink path to ="/groceries">Groceries</NavLink>
-            {user ? <NavLink path to="/logout" onClick={onLogout}>Logout</NavLink> : <NavLink path to ="/login">Login</NavLink>}
+            <NavLink path to ="/">Logo</NavLink> / 
+            <NavLink path to ="/groceries">Groceries</NavLink> / 
+            {user ? <NavLink path to="/logout" onClick={onLogout}>Logout</NavLink> : <NavLink path to ="/login">Login</NavLink>} / 
             <NavLink path to ="/signup">Register</NavLink>
         </div>
     )

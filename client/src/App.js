@@ -4,12 +4,16 @@ import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import GroceryDetail from './components/GroceryDetail';
 import GroceryList from './components/GroceryList';
+import GroceryAddForm from './components/GroceryAddForm';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Home from './components/Home';
 
 
 function App() {
+
+  const history = useHistory()
+
 
   const [user, setUser] = useState(null)
   
@@ -25,9 +29,6 @@ function App() {
     setUser(user)
   }
 
-
-  const history = useHistory()
-
   function handleLogout() {
     setUser(null)
     fetch('/logout', {
@@ -36,6 +37,17 @@ function App() {
     .then(() => history.push('/'))
   }
 
+
+  const [groceries, setGroceries] = useState([])
+
+  function fetchAllGroceries() {
+    fetch('/groceries')
+    .then(resp => resp.json())
+    .then(allGroceries => setGroceries(allGroceries))
+  }
+  useEffect(() => fetchAllGroceries(), [])
+
+
   return (
     <div className="App">
       
@@ -43,12 +55,16 @@ function App() {
 
       <Switch>
 
+        <Route exact path = "/groceries/new">
+          <GroceryAddForm user={user} />
+        </Route>
+
         <Route exact path = "/groceries/:id">
-          <GroceryDetail />
+          <GroceryDetail user={user} />
         </Route>
 
         <Route exact path = "/groceries">
-          <GroceryList />
+          <GroceryList groceries={groceries} />
         </Route>
 
         <Route exact path = "/signup">
