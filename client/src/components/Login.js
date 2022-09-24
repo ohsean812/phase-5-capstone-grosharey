@@ -7,6 +7,7 @@ function Login( {handleLogin} ) {
 
     const[ username, setUsername ] = useState("")
     const[ password, setPassword ] = useState("")
+    const [errors, setErrors] = useState([])
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -17,11 +18,14 @@ function Login( {handleLogin} ) {
                 username,
                 password
             })
-        })
-            .then(resp => resp.json())
-            .then(user => {handleLogin(user); history.push(`/groceries`)})
-    }
-
+        }).then(r=>{
+            if (r.ok) {
+                r.json().then(user=>{handleLogin(user); history.push('/groceries')})
+            } else {
+                r.json().then(err=>setErrors([err]))
+            }
+        }
+    )}
 
     return (
         <div>
@@ -30,6 +34,8 @@ function Login( {handleLogin} ) {
                 <input type="text" placeholder="Enter Username" name="username" onChange={(event) => setUsername(event.target.value)} />
                 <input type="password" placeholder="Enter Password" name="password" onChange={(event) => setPassword(event.target.value)} />
                 <button type="submit">Log in</button>
+                {errors.map((err)=>
+                <div key={err}>{err.error}</div>)}
             </form>
         </div>
     )

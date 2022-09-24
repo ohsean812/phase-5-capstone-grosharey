@@ -17,21 +17,10 @@ class GroceriesController < ApplicationController
 
   # POST /groceries
   def create
-    if (user)
       grocery = Grocery.create!(grocery_params)
       render json: grocery, status: :created
-    else
-      return render json: {error: ["Not authorized"]}, status: :unauthorized
-    end
-    # @grocery = Grocery.new(grocery_params)
-
-    # if @grocery.save
-    #   render json: @grocery, status: :created, location: @grocery
-    # else
-    #   render json: @grocery.errors, status: :unprocessable_entity
-    # end
   end
-
+  
   # PATCH/PUT /groceries/1
   def update
     grocery.update!(grocery_params)

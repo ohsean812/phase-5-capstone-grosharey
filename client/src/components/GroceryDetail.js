@@ -15,6 +15,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
         .then(showGrocery => setGrocery(showGrocery))
     }, [params.id])
 
+
     const [comments, setComments] = useState([])
 
     useEffect(() => {
@@ -24,9 +25,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
     }, [params.id])
 
 
-
     const [content, setContent] = useState("")
-
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -56,8 +55,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
         e.target.reset()
     }
 
-    const sortedComments = [...comments].sort((a,b) => b.id - a.id)
-    
+    const sortedComments = [...comments].sort((a,b) => a.id - b.id)
     const renderComments = sortedComments.map((comment) => <GroceryComments user={user} comment={comment} key={comment.id} />)
 
 

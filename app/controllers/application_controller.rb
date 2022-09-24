@@ -3,8 +3,8 @@ class ApplicationController < ActionController::API
 
     before_action :authorize
 
-rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-rescue_from ActiveRecord::RecordInvalid, with: :render_invalid_response
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    rescue_from ActiveRecord::RecordInvalid, with: :render_invalid_response
 
     private
 
@@ -17,7 +17,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_invalid_response
     end
 
     def authorize
-        return render json: {error: "Not authorized" }, status: :unauthorized unless session.include?(:user_id)
+        return render json: { error: "Not authorized" }, status: :unauthorized unless session.include?(:user_id)
     end
 
 end

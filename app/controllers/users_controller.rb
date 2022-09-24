@@ -1,5 +1,22 @@
 class UsersController < ApplicationController
 
+    
+# DO I NEED INDEX AND SHOW?
+    def index
+        render json: User.all
+    end
+
+    def show
+        user = User.find(params[:id])
+        render json: user, status: :ok
+    end
+# DO I NEED INDEX AND SHOW?
+
+    def get_logged_in
+        user = User.find(session[:user_id])
+        render json: user, status: :ok
+    end
+
     def create
         user = User.create(user_params)
         if user.valid?
@@ -10,19 +27,10 @@ class UsersController < ApplicationController
         end
     end
 
-    def get_logged_in
-        user = User.find(session[:user_id])
-        render json: user, status: :ok
-    end
-
     private
 
     def user_params
         params.permit(:username, :password, :password_confirmation)
-    end
-
-    def authorize
-        return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
     end
 
 end

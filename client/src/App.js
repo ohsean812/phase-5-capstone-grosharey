@@ -14,15 +14,13 @@ function App() {
 
   const history = useHistory()
 
-
-  const [user, setUser] = useState(null)
-  
+  const [user, setUser] = useState(null);
   useEffect(() => {
     fetch('/me').then((resp) => {
       if (resp.ok) {
         resp.json().then((user) => setUser(user))
       }
-    })
+    });
   }, [])
 
   function handleLogin(user) {
@@ -31,10 +29,10 @@ function App() {
 
   function handleLogout() {
     setUser(null)
-    fetch('/logout', {
-      method: "DELETE"
-    })
-    .then(() => history.push('/'))
+    // fetch('/logout', {
+    //   method: "DELETE"
+    // })
+    // .then(() => history.push('/'))
   }
 
   const [comments, setComments] = useState([])
@@ -46,6 +44,7 @@ function App() {
   }
   useEffect(() => fetchAllComments(), [])
 
+  
   // Update state of App/Home when submitting comment from GroceryDetail
   function updateCommentsMasterState(new_comment){
     setComments((comments) => [...comments, new_comment])
