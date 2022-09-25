@@ -68,6 +68,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
             <h1>Quantity: {grocery.quantity}</h1>
             <h1>Purchased from: {grocery.store}</h1>
             <h1>Purchase Date: {grocery.date}</h1>
+            <h1>Posted by: {grocery.owner}</h1>
             
             <h2>### This is where the rendered comments should appear ###</h2>
             {renderComments}

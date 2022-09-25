@@ -6,6 +6,7 @@ class CreateGroceries < ActiveRecord::Migration[7.0]
       t.string :quantity
       t.string :store
       t.date :date
+      t.string :owner
 
       t.timestamps
     end

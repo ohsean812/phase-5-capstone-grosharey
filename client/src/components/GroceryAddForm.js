@@ -23,9 +23,8 @@ function GroceryAddForm( {user} ) {
                 price,
                 quantity,
                 store,
-                date
-                // date,
-                // user_id: user.id
+                date,
+                owner: user.username
             })
         }).then(resp => {
             if (resp.ok) {

@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_21_223827) do
     t.string "quantity"
     t.string "store"
     t.date "date"
+    t.string "owner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -43,7 +43,7 @@ class GroceriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def grocery_params
-      params.permit(:name, :price, :quantity, :store, :date)
+      params.permit(:name, :price, :quantity, :store, :date, :owner)
     end
 
 end

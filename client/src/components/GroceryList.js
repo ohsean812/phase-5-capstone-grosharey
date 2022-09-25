@@ -9,7 +9,7 @@ function GroceryList( {groceries, setGroceries} ) {
         fetch('/groceries')
         .then(resp => resp.json())
         .then(showGroceries =>setGroceries(showGroceries))
-    })
+    }, [])
 
     return (
         <div>
