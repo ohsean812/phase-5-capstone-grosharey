@@ -11,7 +11,7 @@ class GroceriesController < ApplicationController
 
   # GET /groceries/1
   def show
-    grocery = Grocery.find(params[:id])
+    grocery = Grocery.find(params[:id]) 
     render json: grocery, status: :ok
   end
 
@@ -29,6 +29,7 @@ class GroceriesController < ApplicationController
 
   # DELETE /groceries/1
   def destroy
+    grocery = Grocery.find(params[:id])
     grocery.destroy
     head :no_content
   end

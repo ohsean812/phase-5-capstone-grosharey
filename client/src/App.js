@@ -77,7 +77,7 @@ function App() {
         </Route>
 
         <Route exact path = "/groceries">
-          <GroceryList groceries={groceries} setGroceries={setGroceries} />
+          <GroceryList user={user} groceries={groceries} setGroceries={setGroceries} />
         </Route>
 
         <Route exact path = "/signup">

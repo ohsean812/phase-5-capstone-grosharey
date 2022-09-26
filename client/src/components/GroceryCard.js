@@ -1,11 +1,27 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-function GroceryCard( {grocery} ) {
+function GroceryCard( {user, grocery, groceries, setGroceries} ) {
+    
+    function handleDelete(e) {
+        e.preventDefault()
+        fetch(`/groceries/${grocery.id}`, {method: "DELETE"})
+        .then(() => setGroceries(groceries.filter(groceryObj => groceryObj.id !== grocery.id)))
+    }
+    
 
     return (
         <div>
-            <Link to={`/groceries/${grocery.id}`}><h4>{grocery.name} / ${grocery.price} / {grocery.quantity} / from {grocery.store}</h4></Link>
+            <Link to={`/groceries/${grocery.id}`}>Grocery Photo {grocery.id}</Link>
+            <h4>
+                {grocery.name} / 
+                ${grocery.price} / 
+                {grocery.quantity} / 
+                from {grocery.store} / 
+                {user && (user.username === grocery.owner) ? <button>Edit</button> : null} / 
+                {user && (user.username === grocery.owner) ? <button onClick={handleDelete}>Delete</button> : null}
+            </h4>
+            <br/><br/>
         </div>
     )
 }
