@@ -1,10 +1,13 @@
 import React from "react";
 
+
 function GroceryComments( {user, comment} ) {
 
     return (
         <div>
-            {comment.content}
+            {comment.user.username} said: "
+            <b>{comment.content}</b>
+            " at {comment.created_at.slice(11,19)}
         </div>
     )
 }
