@@ -23,6 +23,7 @@ class GroceriesController < ApplicationController
   
   # PATCH/PUT /groceries/1
   def update
+    grocery = Grocery.find(params[:id])
     grocery.update!(grocery_params)
     render json: grocery, status: :accepted
   end

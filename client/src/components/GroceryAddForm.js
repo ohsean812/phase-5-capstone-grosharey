@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function GroceryAddForm( {user} ) {
 
@@ -46,6 +46,7 @@ function GroceryAddForm( {user} ) {
                 <input type="text" name="store" placeholder="Store purchased from" onChange={e=>setStore(e.target.value)} /><br/>
                 <input type="date" name="date" placeholder="Purchase Date" onChange={e=>setDate(e.target.value)} /><br/>
                 <button type="submit">Submit</button>
+                <Link to={`/groceries`}><button>Cancel</button></Link>
                 {/* {errors.map((err)=>(
                     <Error key={err}>{err.error}</Error>
                 ))} */}

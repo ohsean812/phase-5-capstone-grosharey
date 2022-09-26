@@ -5,6 +5,7 @@ import NavBar from './NavBar';
 import GroceryDetail from './components/GroceryDetail';
 import GroceryList from './components/GroceryList';
 import GroceryAddForm from './components/GroceryAddForm';
+import GroceryEditForm from './components/GroceryEditForm';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Home from './components/Home';
@@ -60,6 +61,11 @@ function App() {
   }
   useEffect(() => fetchAllGroceries(), [])
 
+  function replaceUpdatedGrocery(new_grocery){
+    let filterdGroceries = groceries.filter(grocery => grocery.id !== new_grocery.id)
+    filterdGroceries.push(new_grocery)
+    setGroceries(filterdGroceries)
+  }
 
   return (
     <div className="App">
@@ -70,6 +76,10 @@ function App() {
 
         <Route exact path = "/groceries/new">
           <GroceryAddForm user={user} />
+        </Route>
+
+        <Route exact path = "/groceries/:id/edit">
+          <GroceryEditForm user={user} replaceUpdatedGrocery={replaceUpdatedGrocery} />
         </Route>
 
         <Route exact path = "/groceries/:id">

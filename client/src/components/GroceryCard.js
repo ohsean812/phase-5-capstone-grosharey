@@ -18,7 +18,7 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
                 ${grocery.price} / 
                 {grocery.quantity} / 
                 from {grocery.store} / 
-                {user && (user.username === grocery.owner) ? <button>Edit</button> : null} / 
+                {user && (user.username === grocery.owner) ? <Link to={`/groceries/${grocery.id}/edit`}><button>Edit</button></Link> : null} / 
                 {user && (user.username === grocery.owner) ? <button onClick={handleDelete}>Delete</button> : null}
             </h4>
             <br/><br/>
