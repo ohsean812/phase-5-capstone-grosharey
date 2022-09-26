@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function GroceryComments( {user, comment} ) {
+function GroceryComments( {comment} ) {
 
     return (
         <div>

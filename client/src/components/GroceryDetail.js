@@ -56,7 +56,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
     }
 
     const sortedComments = [...comments].sort((a,b) => a.id - b.id)
-    const renderComments = sortedComments.map((commentObj) => <GroceryComments user={user} comment={commentObj} key={commentObj.id} />)
+    const renderComments = sortedComments.map((commentObj) => <GroceryComments comment={commentObj} key={commentObj.id} />)
     
 
 
