@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   get '/me', to: "users#get_logged_in"
   delete '/logout', to: "sessions#destroy"
+  get '/latest', to: "groceries#latest"
 
 
 

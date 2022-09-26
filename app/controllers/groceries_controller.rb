@@ -35,6 +35,11 @@ class GroceriesController < ApplicationController
     head :no_content
   end
 
+  def latest
+    grocery = Grocery.last
+    render json: grocery
+  end
+
 
   private
 
@@ -45,7 +50,7 @@ class GroceriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def grocery_params
-      params.permit(:name, :price, :quantity, :store, :date, :owner)
+      params.permit(:name, :price, :quantity, :store, :date, :owner, :image)
     end
 
 end
