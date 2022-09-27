@@ -14,7 +14,10 @@ function LatestImage() {
             .catch((error) => console.error(error));
     }, [latestGrocery])
 
+    console.log(latestGrocery)
+    
     return (
+
         <div>
             <img src={latestGrocery} alt="latest grocery" className="latest-image" />
         </div>

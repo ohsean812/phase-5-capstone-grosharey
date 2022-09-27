@@ -14,7 +14,6 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
     return (
         <div>
             <Link to={`/groceries/${grocery.id}`}>Grocery Photo {grocery.id}</Link>
-            <LatestImage />
             <h4>
                 {grocery.name} / 
                 ${grocery.price} / 
