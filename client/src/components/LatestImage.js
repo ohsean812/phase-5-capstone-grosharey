@@ -6,7 +6,7 @@ function LatestImage() {
     const { latestGrocery, setLatestGrocery } = useContext(AppContext);
 
     useEffect(() => {
-        fetch("/latest")
+        fetch('/latest')
             .then((resp) => resp.json())
             .then((data) => {
                 setLatestGrocery(data.image_url);
@@ -14,9 +14,11 @@ function LatestImage() {
             .catch((error) => console.error(error));
     }, [latestGrocery])
 
-    return (<div>
-        <img src={latestGrocery} alt="latest grocery" className="latest-image" />
-    </div>);
+    return (
+        <div>
+            <img src={latestGrocery} alt="latest grocery" className="latest-image" />
+        </div>
+    );
 } 
 
 export default LatestImage;

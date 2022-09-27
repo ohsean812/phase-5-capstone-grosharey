@@ -37,7 +37,7 @@ class GroceriesController < ApplicationController
 
   def latest
     grocery = Grocery.last
-    render json: grocery
+    render json: GrocerySerializer.new(grocery).serializable_hash[:data][:attributes]
   end
 
 

@@ -51,3 +51,4 @@ gem 'faker'
 gem 'activerecord-reset-pk-sequence'
 
 gem 'active_model_serializers'
+gem "jsonapi-serializer", "~> 2.2"
