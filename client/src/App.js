@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Switch, useHistory } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, createContext } from 'react';
 import NavBar from './NavBar';
 import GroceryDetail from './components/GroceryDetail';
 import GroceryList from './components/GroceryList';
@@ -10,6 +10,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Home from './components/Home';
 
+export const AppContext = createContext(null);
 
 function App() {
 
@@ -67,7 +68,12 @@ function App() {
     setGroceries(filterdGroceries)
   }
 
+  const [latestGrocery, setLatestGrocery] = useState(AppContext)
+
   return (
+
+    <AppContext.Provider value={{ latestGrocery, setLatestGrocery }}>
+
     <div className="App">
       
       <NavBar user={user} handleLogout={handleLogout} />
@@ -105,6 +111,8 @@ function App() {
       </Switch>
       
     </div>
+
+    </AppContext.Provider>
   );
 }
 

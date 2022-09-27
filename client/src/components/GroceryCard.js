@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import LatestImage from "./LatestImage";
 
 function GroceryCard( {user, grocery, groceries, setGroceries} ) {
     
@@ -13,6 +14,7 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
     return (
         <div>
             <Link to={`/groceries/${grocery.id}`}>Grocery Photo {grocery.id}</Link>
+            <LatestImage />
             <h4>
                 {grocery.name} / 
                 ${grocery.price} / 

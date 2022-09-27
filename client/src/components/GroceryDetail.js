@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import GroceryComments from "./GroceryComments";
+import LatestImage from "./LatestImage";
 
 function GroceryDetail( {user, updateCommentsMasterState} ) {
 
@@ -65,6 +66,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
         <div>
             <h4>hello grocery detail!</h4>
             <h2>### This is where the photo should appear ###</h2>
+            <LatestImage />
             <h1>{grocery.name}</h1>
             <h1>Price: ${grocery.price}</h1>
             <h1>Quantity: {grocery.quantity}</h1>
