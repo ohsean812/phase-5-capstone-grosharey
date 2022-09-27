@@ -37,8 +37,15 @@
   }
 }
 
-.latest-image {
-  width: 300px;
+.image_thumbnail {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.image_detail {
+  width: 600px;
   height: auto;
   margin: 0 auto;
   display: block;

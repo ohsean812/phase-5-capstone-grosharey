@@ -66,7 +66,6 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
         fetch(`/images/${params.id}`)
             .then((resp) => resp.json())
             .then((data) => {
-                console.log(data)
                 setImage(data.image_url);
             })
             .catch((error) => console.error(error));
@@ -77,7 +76,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
         <div>
             <h4>hello grocery detail!</h4>
             <h2>### This is where the photo should appear ###</h2>
-            <img src={image} alt="latest grocery" className="latest-image" />
+            <img src={image} alt="grocery_image" className="image_detail" />
             <h1>{grocery.name}</h1>
             <h1>Price: ${grocery.price}</h1>
             <h1>Quantity: {grocery.quantity}</h1>
