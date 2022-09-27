@@ -12,9 +12,9 @@ user1 = User.create(username: "username1", password: "password")
 user2 = User.create(username: "username2", password: "password")
 user3 = User.create(username: "username3", password: "password")
 
-8.times do
-    Grocery.create(name: Faker::Food.dish, price: rand(10..20), quantity: Faker::Measurement.weight, store: "Costco", date: "Faker::Date.between(from: '2022-09-21', to: '2022-09-25')", owner: User.pluck(:username).sample)
-end
+# 8.times do
+#     Grocery.create(name: Faker::Food.dish, price: rand(10..20), quantity: Faker::Measurement.weight, store: "Costco", date: "Faker::Date.between(from: '2022-09-21', to: '2022-09-25')", owner: User.pluck(:username).sample)
+# end
 
 20.times do
     Comment.create(content: Faker::Company.bs, user_id: rand(1..3), grocery_id: rand(1..8))

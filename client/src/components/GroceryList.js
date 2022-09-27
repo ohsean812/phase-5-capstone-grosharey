@@ -17,7 +17,6 @@ function GroceryList( {user, groceries, setGroceries} ) {
             <h1><u>hello grocery list!</u></h1>
             {groceries.map(grocery => 
                 <div>
-                    <LatestImage />
                     <GroceryCard user={user} groceries={groceries} setGroceries={setGroceries} key={grocery.id} grocery={grocery} />
                 </div>
             )}

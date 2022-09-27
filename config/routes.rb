@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/me', to: "users#get_logged_in"
   delete '/logout', to: "sessions#destroy"
   get '/latest', to: "groceries#latest"
+  get '/images', to: "groceries#groceries_images"
+  get '/images/:id', to: "groceries#grocery_image"
 
 
 

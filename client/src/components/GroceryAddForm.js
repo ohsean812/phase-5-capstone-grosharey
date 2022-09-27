@@ -59,9 +59,9 @@ function GroceryAddForm( {user} ) {
             .then(resp => {
                 if (resp.ok) {
                     resp.json()
-            .then(data => {
-                setLatestGrocery(data.image_url);
-            })
+            // .then(data => {
+            //     setLatestGrocery(data.image_url);
+            // })
             .then(() => history.push('/groceries'))
             .catch((error) => console.error(error));
         } else {

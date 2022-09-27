@@ -60,13 +60,24 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
     const renderComments = sortedComments.map((commentObj) => <GroceryComments comment={commentObj} key={commentObj.id} />)
     
 
+    const [ image, setImage ] = useState("")
+        
+    useEffect(() => {
+        fetch(`/images/${params.id}`)
+            .then((resp) => resp.json())
+            .then((data) => {
+                console.log(data)
+                setImage(data.image_url);
+            })
+            .catch((error) => console.error(error));
+    }, [])
 
 
     return (
         <div>
             <h4>hello grocery detail!</h4>
             <h2>### This is where the photo should appear ###</h2>
-            <LatestImage />
+            <img src={image} alt="latest grocery" className="latest-image" />
             <h1>{grocery.name}</h1>
             <h1>Price: ${grocery.price}</h1>
             <h1>Quantity: {grocery.quantity}</h1>

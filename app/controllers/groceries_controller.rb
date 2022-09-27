@@ -41,6 +41,17 @@ class GroceriesController < ApplicationController
     render json: GrocerySerializer.new(grocery).serializable_hash[:data][:attributes]
   end
 
+  def groceries_images
+    groceries = Grocery.all
+    groceries_mapped = groceries.map{|grocery| GrocerySerializer.new(grocery).serializable_hash[:data][:attributes]}
+    render json: groceries_mapped
+  end
+
+  def grocery_image
+    grocery = Grocery.find(params[:id])
+    render json: GrocerySerializer.new(grocery).serializable_hash[:data][:attributes]
+  end
+
 
   private
 

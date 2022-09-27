@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Switch, useHistory } from 'react-router-dom';
-import { useEffect, useState, createContext } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 import NavBar from './NavBar';
 import GroceryDetail from './components/GroceryDetail';
 import GroceryList from './components/GroceryList';
