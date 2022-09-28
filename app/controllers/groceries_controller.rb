@@ -1,6 +1,6 @@
 class GroceriesController < ApplicationController
 
-  before_action :set_grocery, only: %i[ show update destroy ]
+  # before_action :set_grocery, only: %i[ show update destroy ]
   skip_before_action :authorize, only: [:index, :show]
 
   # GET /groceries
@@ -56,9 +56,9 @@ class GroceriesController < ApplicationController
   private
 
     # Use callbacks to share common setup or constraints between actions.
-    def set_grocery
-      grocery = Grocery.find(params[:id])
-    end
+    # def set_grocery
+    #   grocery = Grocery.find(params[:id])
+    # end
 
     # Only allow a list of trusted parameters through.
     def grocery_params
