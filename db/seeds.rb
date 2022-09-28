@@ -23,7 +23,7 @@ grocery1 = Grocery.create(name: "Toothpaste",
                         date: "2022-09-23",
                         owner: User.pluck(:username).sample
                         )
-    grocery1.image.attach(io: File.open(Rails.root.join('app/assets/toothpaste.jpeg')),
+    grocery1.image.attach(io: File.open(Rails.root.join('client/assets/toothpaste.jpeg')),
                         filename: 'toothpaste.jpeg')
 
 grocery2 = Grocery.create(name: "Ketchup",
@@ -33,7 +33,7 @@ grocery2 = Grocery.create(name: "Ketchup",
                         date: "2022-09-25",
                         owner: User.pluck(:username).sample
                         )
-    grocery2.image.attach(io: File.open(Rails.root.join('app/assets/ketchup.webp')),
+    grocery2.image.attach(io: File.open(Rails.root.join('client/assets/ketchup.webp')),
                         filename: 'ketchup.webp')
 
 grocery3 = Grocery.create(name: "External Hard Drive",
@@ -43,7 +43,7 @@ grocery3 = Grocery.create(name: "External Hard Drive",
                         date: "2022-09-27",
                         owner: User.pluck(:username).sample
                         )
-    grocery3.image.attach(io: File.open(Rails.root.join('app/assets/harddrive.avif')),
+    grocery3.image.attach(io: File.open(Rails.root.join('client/assets/harddrive.avif')),
                         filename: 'harddrive.avif')
 
 

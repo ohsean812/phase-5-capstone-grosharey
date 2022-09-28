@@ -77,13 +77,13 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
             <h4>hello grocery detail!</h4>
             <h2>### This is where the photo should appear ###</h2>
             <img src={image} alt="grocery_image" className="image_detail" />
-            <h1>{grocery.name}</h1>
-            <h1>Price: ${grocery.price}</h1>
-            <h1>Quantity: {grocery.quantity}</h1>
-            <h1>Purchased from: {grocery.store}</h1>
-            <h1>Purchase Date: {grocery.date}</h1>
-            <h1>Posted by: {grocery.owner}</h1>
-            
+            <h3>{grocery.name}</h3>
+            <h3>Price: ${grocery.price}</h3>
+            <h3>Quantity: {grocery.quantity}</h3>
+            <h3>Purchased from: {grocery.store}</h3>
+            <h3>Purchase Date: {grocery.date}</h3>
+            <h3>Posted by: {grocery.owner}</h3>
+            <br/><br/><br/>
             <h2>### This is where the rendered comments should appear ###</h2>
             {renderComments}
             <br/>

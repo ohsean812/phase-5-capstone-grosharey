@@ -50,3 +50,8 @@
   margin: 0 auto;
   display: block;
 }
+
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:30px;
+}
