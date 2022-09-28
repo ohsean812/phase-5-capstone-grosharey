@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import GroceryComments from "./GroceryComments";
-import LatestImage from "./LatestImage";
+// import LatestImage from "./LatestImage";
 
 function GroceryDetail( {user, updateCommentsMasterState} ) {
 
@@ -86,6 +86,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
             
             <h2>### This is where the rendered comments should appear ###</h2>
             {renderComments}
+            <br/>
 
             <form onSubmit={handleSubmit}>
                 <label htmlFor="chat">Chat </label>

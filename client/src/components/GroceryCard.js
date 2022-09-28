@@ -34,10 +34,10 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
                 <img src={image} alt="grocery_thumbnail" className="image_thumbnail" />
             </Link>
             <h4>
-                {grocery.name} / 
-                {grocery.quantity} / 
-                ${grocery.price} / 
-                {user && (user.username === grocery.owner) ? <Link to={`/groceries/${grocery.id}/edit`}><button>Edit</button></Link> : null} / 
+                {grocery.name}<br/>
+                {grocery.quantity}<br/>
+                ${grocery.price}<br/>
+                {user && (user.username === grocery.owner) ? <Link to={`/groceries/${grocery.id}/edit`}><button>Edit</button></Link> : null}
                 {user && (user.username === grocery.owner) ? <button onClick={handleDelete}>Delete</button> : null}
             </h4>
             <br/><br/>

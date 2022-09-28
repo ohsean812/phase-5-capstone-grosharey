@@ -23,7 +23,8 @@ function GroceryList( {user, groceries, setGroceries} ) {
                 </div>
             )}
             <br />
-            <Link to='/groceries/new'>Add your grocery</Link>
+            <Link to='/groceries/new'><h3>Add your grocery</h3></Link>
+            <br /><br /><br />
         </div>
     )
 }
