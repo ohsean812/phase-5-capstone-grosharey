@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import GroceryCard from "./GroceryCard";
-import LatestImage from "./LatestImage";
+// import LatestImage from "./LatestImage";
 
 
 function GroceryList( {user, groceries, setGroceries} ) {

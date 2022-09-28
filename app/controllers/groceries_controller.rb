@@ -1,7 +1,7 @@
 class GroceriesController < ApplicationController
 
   # before_action :set_grocery, only: %i[ show update destroy ]
-  skip_before_action :authorize, only: [:index, :show]
+  skip_before_action :authorize, only: [:index, :show, :grocery_image, :groceries_images]
 
   # GET /groceries
   def index
@@ -46,6 +46,7 @@ class GroceriesController < ApplicationController
     groceries_mapped = groceries.map{|grocery| GrocerySerializer.new(grocery).serializable_hash[:data][:attributes]}
     render json: groceries_mapped
   end
+
 
   def grocery_image
     grocery = Grocery.find(params[:id])

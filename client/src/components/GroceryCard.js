@@ -5,12 +5,9 @@ import LatestImage from "./LatestImage";
 
 function GroceryCard( {user, grocery, groceries, setGroceries} ) {
 
-    // const { latestGrocery, setLatestGrocery } = useContext(AppContext);
+    const [image, setImage] = useState("")
 
-    const [ image, setImage ] = useState("")
-        
     useEffect(() => {
-        // fetch(`/groceries/${grocery.id}`)
         fetch(`/images/${grocery.id}`)
             .then((resp) => resp.json())
             .then((data) => {

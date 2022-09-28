@@ -12,9 +12,7 @@ function NavBar( {user, handleLogout} ) {
     }
 
     return (
-
         <nav className="navbar navbar-expand-lg bg-light">
-
         <div className="container-fluid">
             <NavLink path to ="/" className="navbar-brand">
                 <img src={logo} alt="Logo" width="150" height="50" />
