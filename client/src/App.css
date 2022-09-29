@@ -39,8 +39,8 @@
 
 .image_thumbnail {
   width: 200px;
-  height: auto;
-  margin: 0 auto;
+  height: 200px;
+  margin: 50px auto 10px auto;
   display: block;
 }
 
@@ -54,4 +54,13 @@
 .navbar-nav > li{
   padding-left:10px;
   padding-right:30px;
+}
+
+div.row {
+  justify-content: center;
+}
+
+div.card {
+  width: 250px;
+  height: 450px;
 }

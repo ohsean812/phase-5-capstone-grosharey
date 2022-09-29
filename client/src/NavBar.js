@@ -14,24 +14,24 @@ function NavBar( {user, handleLogout} ) {
     return (
         <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-            <NavLink path to ="/" className="navbar-brand">
+            <NavLink exact to ="/" className="navbar-brand">
                 <img src={logo} alt="Logo" width="150" height="50" />
             </NavLink>
-            <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                        <NavLink path to ="/groceries" className="nav-link active" aria-current="page">Groceries</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        {user ? <NavLink path to="/" className="nav-link" onClick={onLogout}>Logout</NavLink>
-                        :
-                        <NavLink path to ="/login" className="nav-link">Login</NavLink>}
-                    </li>
-                    <li className="nav-item">
-                        <NavLink path to ="/signup" className="nav-link">Register</NavLink>
-                    </li>
-                </ul>
-            </div>
+        <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                    <NavLink exact to ="/groceries" className="nav-link active" aria-current="page">Groceries</NavLink>
+                </li>
+                <li className="nav-item">
+                    {user ? <NavLink exact to="/" className="nav-link" onClick={onLogout}>Logout</NavLink>
+                    :
+                    <NavLink exact to ="/login" className="nav-link">Login</NavLink>}
+                </li>
+                <li className="nav-item">
+                    {user ? null : <NavLink exact to ="/signup" className="nav-link">Register</NavLink>}
+                </li>
+            </ul>
+        </div>
         </div>
         </nav>
 

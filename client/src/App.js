@@ -105,7 +105,7 @@ function App() {
         </Route>
 
         <Route exact path = "/">
-          <Home />
+          <Home user={user} />
         </Route>
 
       </Switch>

@@ -16,15 +16,17 @@ function GroceryList( {user, groceries, setGroceries} ) {
         <div>
             <h1><u>hello grocery list!</u></h1>
             <h4>(Click the image to see the details)</h4>
+            {user ? <Link to='/groceries/new'><h3>Add your grocery</h3></Link> : null}
             <br/><br/>
-            {groceries.map(grocery => 
-                <div>
-                    <GroceryCard user={user} groceries={groceries} setGroceries={setGroceries} key={grocery.id} grocery={grocery} />
-                </div>
+
+            <div className="row">
+                {groceries.map(grocery => 
+                    <div className="col-lg-3 col-md-6">
+                        <GroceryCard user={user} groceries={groceries} setGroceries={setGroceries} key={grocery.id} grocery={grocery} />
+                    </div>
             )}
-            <br />
-            <Link to='/groceries/new'><h3>Add your grocery</h3></Link>
-            <br /><br /><br />
+            </div>
+            <br/><br/><br/>
         </div>
     )
 }

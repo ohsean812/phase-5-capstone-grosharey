@@ -3,6 +3,7 @@ import { AppContext } from "../App";
 import { Link } from 'react-router-dom';
 import LatestImage from "./LatestImage";
 
+
 function GroceryCard( {user, grocery, groceries, setGroceries} ) {
 
     const [image, setImage] = useState("")
@@ -26,17 +27,28 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
     
 
     return (
-        <div>
-            <Link to={`/groceries/${grocery.id}`}>
+        <div className="card">
+            {user ? 
+            (<Link to={`/groceries/${grocery.id}`}>
                 <img src={image} alt="grocery_thumbnail" className="image_thumbnail" />
-            </Link>
-            <h4>
-                {grocery.name}<br/>
+            </Link>)
+            :
+            (<Link to={'/'}>
+                <img src={image} alt="grocery_thumbnail" className="image_thumbnail" />
+            </Link>)
+            }
+            <div className="card-body">
+                
+            <h4 className="card-title">
+                {grocery.name}
+            </h4>
+            <p className="card-text">    
                 {grocery.quantity}<br/>
                 ${grocery.price}<br/>
                 {user && (user.username === grocery.owner) ? <Link to={`/groceries/${grocery.id}/edit`}><button>Edit</button></Link> : null}
                 {user && (user.username === grocery.owner) ? <button onClick={handleDelete}>Delete</button> : null}
-            </h4>
+            </p>
+            </div>
             <br/><br/>
         </div>
     )
