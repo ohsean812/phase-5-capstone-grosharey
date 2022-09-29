@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AppContext } from "../App";
+// import { AppContext } from "../App";
 import { Link } from 'react-router-dom';
-import LatestImage from "./LatestImage";
+// import LatestImage from "./LatestImage";
 
 
 function GroceryCard( {user, grocery, groceries, setGroceries} ) {
@@ -38,13 +38,13 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
             </Link>)
             }
             <div className="card-body">
-                
+
             <h4 className="card-title">
                 {grocery.name}
             </h4>
             <p className="card-text">    
-                {grocery.quantity}<br/>
-                ${grocery.price}<br/>
+                Quantity: {grocery.quantity}<br/>
+                <h5>Price: ${grocery.price}</h5><br/>
                 {user && (user.username === grocery.owner) ? <Link to={`/groceries/${grocery.id}/edit`}><button>Edit</button></Link> : null}
                 {user && (user.username === grocery.owner) ? <button onClick={handleDelete}>Delete</button> : null}
             </p>

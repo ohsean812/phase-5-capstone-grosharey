@@ -20,7 +20,7 @@ function NavBar( {user, handleLogout} ) {
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                    <NavLink exact to ="/groceries" className="nav-link active" aria-current="page">Groceries</NavLink>
+                    <NavLink exact to ="/groceries" className="nav-link">Groceries</NavLink>
                 </li>
                 <li className="nav-item">
                     {user ? <NavLink exact to="/" className="nav-link" onClick={onLogout}>Logout</NavLink>

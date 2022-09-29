@@ -35,11 +35,11 @@ class GroceriesController < ApplicationController
     head :no_content
   end
 
-  def latest
-    # grocery = Grocery.find(params[:id])
-    grocery = Grocery.last
-    render json: GrocerySerializer.new(grocery).serializable_hash[:data][:attributes]
-  end
+  # def latest
+  #   # grocery = Grocery.find(params[:id])
+  #   grocery = Grocery.last
+  #   render json: GrocerySerializer.new(grocery).serializable_hash[:data][:attributes]
+  # end
 
   def groceries_images
     groceries = Grocery.all

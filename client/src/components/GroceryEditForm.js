@@ -12,6 +12,7 @@ function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
     const [quantity, setQuantity] = useState("")
     const [store, setStore] = useState("")
     const [date, setDate] = useState("")
+    const [image, setImage] = useState("")
 
 
     useEffect(() => {
@@ -85,7 +86,7 @@ function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
                 <input type="date" name="date" onChange={e=>setDate(e.target.value)} value={date} id="date" /><br/>
 
                 <label htmlFor="image">Replace Image</label>
-                <input type="file" name="image" id="image" /><br/>
+                <input type="file" name="image" onChange={e=>setImage(e.target.value)} value={image} id="image" /><br/>
 
                 <button type="submit">Update</button>
                 <Link to={`/groceries`}><button>Cancel</button></Link>
