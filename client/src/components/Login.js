@@ -28,7 +28,7 @@ function Login( {handleLogin} ) {
     )}
 
     return (
-        <div>
+        <div className="background">
             <h1>hello login!</h1>
             <form name="login" onSubmit={(event) => handleSubmit(event)}>
                 <input type="text" placeholder="Enter Username" name="username" onChange={(event) => setUsername(event.target.value)} />

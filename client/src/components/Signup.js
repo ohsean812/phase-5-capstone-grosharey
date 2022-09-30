@@ -32,7 +32,7 @@ function Signup( {handleLogin} ) {
     }
 
     return (
-        <div>
+        <div className="background">
             <h1>hello signup!</h1>
             <form name="login" onSubmit={e => handleSubmit(e)}>
                 <input autoComplete="off" type="text" placeholder="Create Username" name="username" onChange={e => setUsername(e.target.value)} /><br/>
