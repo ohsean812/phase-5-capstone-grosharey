@@ -21,7 +21,7 @@ function Signup( {handleLogin} ) {
                 password_confirmation: passwordConfirmation
             })
         }).then(resp => resp.json())
-        .then(() => history.push("/login"))
+        .then(() => history.push("/groceries"))
         // }).then(resp => {
         //     if (resp.ok) {
         //         resp.json().then(newUser => {handleLogin(newUser); history.push("/login")})

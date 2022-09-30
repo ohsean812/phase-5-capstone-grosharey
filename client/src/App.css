@@ -38,15 +38,14 @@
 }
 
 .image_thumbnail {
-  width: 200px;
-  height: 200px;
-  margin: 50px auto 10px auto;
-  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto 10px auto;
 }
 
 .image_detail {
-  width: 600px;
-  height: auto;
+  width: auto;
+  height: 500px;
   margin: 0 auto;
   display: block;
 }
@@ -57,10 +56,30 @@
 }
 
 div.row {
-  justify-content: center;
+  justify-content: center; 
 }
 
-div.card {
-  width: 350px;
-  height: 450px;
+.article-container {
+  width: 420px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article-img-holder {
+  width: 100%;
+  height: 100%;
+  /* background: url(https://awik.io/demo/background-image-zoom/traffic2.jpg); */
+  /* background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  transition: all 1s;
+}
+
+.article-img-holder:hover {
+  transform: scale(1.2);
+}
+
+.user_buttons {
+  text-align: right;
 }

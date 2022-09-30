@@ -27,29 +27,49 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
     
 
     return (
+
         <div className="card">
+
+            <div className="user_buttons">
+                {user && (user.username === grocery.owner) ?
+                    <Link to={`/groceries/${grocery.id}/edit`}>
+                    <span className="btn btn-outline-secondary btn-sm">Edit</span>
+                    </Link>
+                : <br/>}
+                {user && (user.username === grocery.owner) ?
+                    <Link to={'/groceries'}>
+                    <span className="btn btn-outline-secondary btn-sm" onClick={handleDelete}>Delete</span>
+                    </Link>
+                : null}
+            </div>
+
             {user ? 
             (<Link to={`/groceries/${grocery.id}`}>
-                <img src={image} alt="grocery_thumbnail" className="image_thumbnail" />
+                <div className="article-container">
+                <div className="article-img-holder">
+                    <img src={image} alt="grocery_thumbnail" className="image_thumbnail" />
+                </div>
+                </div>
             </Link>)
             :
             (<Link to={'/'}>
-                <img src={image} alt="grocery_thumbnail" className="image_thumbnail" />
+                <div className="article-container">
+                <div className="article-img-holder">
+                    <img src={image} alt="grocery_thumbnail" className="image_thumbnail" />
+                </div>
+                </div>
             </Link>)
             }
-            <div className="card-body">
 
-            <h4 className="card-title">
-                {grocery.name}
-            </h4>
-            <p className="card-text">    
-                Quantity: {grocery.quantity}<br/>
-                <h5>Price: ${grocery.price}</h5><br/>
-                {user && (user.username === grocery.owner) ? <Link to={`/groceries/${grocery.id}/edit`}><button>Edit</button></Link> : null}
-                {user && (user.username === grocery.owner) ? <button onClick={handleDelete}>Delete</button> : null}
+            <div className="card-body">
+            <h3 className="card-title mb-3"><b>{grocery.name}</b></h3>
+            <p className="card-text">
+                <h5>{grocery.quantity}</h5>
+                <h5><b>${grocery.price}.00</b></h5><br/>
             </p>
             </div>
-            <br/><br/>
+
+        
         </div>
     )
 }
