@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-// import { Error }
+import { NavLink } from "react-router-dom";
+import icon from '../icon.png'
 
 function Signup( {handleLogin} ) {
 
@@ -9,6 +10,8 @@ function Signup( {handleLogin} ) {
     const [ username, setUsername ] = useState("");
     const [ password, setPassword ] = useState("");
     const [ passwordConfirmation, setPasswordConfirmation ] = useState("");
+
+    const[ errors, setErrors ] = useState([])
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -20,30 +23,72 @@ function Signup( {handleLogin} ) {
                 password,
                 password_confirmation: passwordConfirmation
             })
-        }).then(resp => resp.json())
-        .then(() => history.push("/groceries"))
-        // }).then(resp => {
-        //     if (resp.ok) {
-        //         resp.json().then(newUser => {handleLogin(newUser); history.push("/login")})
-        //     } else {
-        //         resp.json().then(error => setErrors([error]))
-        //     }
-        // })
+        // }).then(resp => resp.json())
+        // .then(() => history.push("/groceries"))
+        }).then(resp => {
+            if (resp.ok) {
+                resp.json().then(newUser => {handleLogin(newUser); history.push("/groceries")})
+            } else {
+                resp.json().then(error => setErrors([error]))
+            }
+        })
     }
 
     return (
-        <div className="background">
-            <h1>hello signup!</h1>
-            <form name="login" onSubmit={e => handleSubmit(e)}>
-                <input autoComplete="off" type="text" placeholder="Create Username" name="username" onChange={e => setUsername(e.target.value)} /><br/>
-                <input autoComplete="off" type="password" placeholder="Create Password" name="password" onChange={e => setPassword(e.target.value)} /><br/>
-                <input autoComplete="off" type="password" placeholder="Confirm Password" name="password_confirmation" onChange={e => setPasswordConfirmation(e.target.value)} /><br/>
-                <button type="submit">Register</button>
-                {/* {errors.map(error => (
-                    <Error key={error}>{error.error}</Error>
-                ))} */}
-            </form>
+    <section className="h-100 gradient-form" style={{backgroundColor: '#eee'}}>
+        <div className="container py-5 h-100">
+          <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="col-xl-10">
+              <div className="card rounded-3 text-black">
+                <div className="row g-0">
+                <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
+                    <div className="text-white px-3 py-4 p-md-5 mx-md-4">
+                      <h4 className="mb-4">We are more than just a company</h4>
+                      <p className="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-6">
+                    <div className="card-body p-md-5 mx-md-4">
+                      <div className="text-center">
+                        <img src={icon} style={{width: '185px'}} alt="logo" />
+                        <h4 className="mt-1 mb-5 pb-1">Welcome to <i><b style={{color: 'darkblue'}}>Gro</b><b style={{color: 'red'}}>share</b></i><b style={{color: 'darkblue'}}>y</b></h4>
+                      </div>
+
+                      <form name="login" onSubmit={e => handleSubmit(e)}>
+                        <p>Sign up now!</p>
+                        <div className="form-outline mb-4">
+                          <input autoComplete="off" type="text" className="form-control" placeholder="Create Username" name="username" onChange={e => setUsername(e.target.value)} />
+                        </div>
+                        <div className="form-outline mb-4">
+                          <input autoComplete="off" type="password" className="form-control" placeholder="Create Password" name="password" onChange={e => setPassword(e.target.value)} />
+                        </div>
+                        <div className="form-outline mb-4">
+                          <input autoComplete="off" type="password" className="form-control" placeholder="Confirm Password" name="password_confirmation" onChange={e => setPasswordConfirmation(e.target.value)} />
+                        </div>
+
+                        {errors.map((err) =>
+                            <p key={err}>{err.error}</p>)}
+                        <div className="text-center pt-1 mb-5 pb-1">
+                          <button className="btn btn-outline-primary" type="submit">Sign up</button>
+                        </div>
+                        <div className="d-flex align-items-center justify-content-center pb-4">
+                          <p className="mb-0 me-2">Already have an account?</p>
+                          <NavLink exact to ="/login">
+                          <button type="button" className="btn btn-outline-danger">Log in</button>
+                          </NavLink>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
+    </section>
     )
 }
 
