@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 function Home( {user} ) {
 
     return (
-    // <section style={{backgroundColor: '#eee'}}>
         <div className="background">
             <h1><u>hello home!</u></h1>
             <h1>Welcome to GroSHAREy!</h1>
@@ -20,7 +19,6 @@ function Home( {user} ) {
             Just want to browse around? Check out our <NavLink exact to ="/groceries"><button type="button" className="btn btn-warning">Grocery List</button></NavLink>
             </p>}
         </div>
-    // </section>
     )
 }
 
