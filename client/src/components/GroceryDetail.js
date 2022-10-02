@@ -73,6 +73,8 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
 
 
     return (
+    <section style={{backgroundColor: '#eee'}}>
+        <br/><br/><br/><br/><br/><br/><br/>
         <div>
             <h4>hello grocery detail!</h4>
             <h2>### This is where the photo should appear ###</h2>
@@ -94,6 +96,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
                 <button type="submit">Send</button>
             </form>
         </div>
+    </section>
     )
 }
 

@@ -4,20 +4,30 @@ import { NavLink } from "react-router-dom";
 function Home( {user} ) {
 
     return (
-        <div className="background">
-            <h1><u>hello home!</u></h1>
-            <h1>Welcome to GroSHAREy!</h1>
-            <h3>GroSHAREy is an app that allows you to share & sell/buy portion of your groceries originally purchased in large quantities.</h3>
+        <div className="home_contents">
+            <h1>Welcome to <b>Gro<i style={{color: 'darkblue'}}>share</i>y</b></h1>
+            <br/>
+            <h3>Share your groceries with <b>Gro<i style={{color: 'darkblue'}}>share</i>y</b>, a smarter way to shop!</h3>
+            <h4>Sell & buy portion of groceries purchased in large quantities from warehouse club chains like Costco, Sam's Club, BJ's, etc.</h4>
+            <br/>
             {user ?
             <p>
-            You are currently logged in as {user.username}.  Check back our <NavLink exact to ="/groceries"><button type="button" className="btn btn-warning">Grocery List</button></NavLink>
+            You are currently logged in as {user.username}.  Check back our <NavLink exact to ="/groceries"><button type="button" className="btn btn-outline-dark">Grocery List</button></NavLink>
             </p>
             :
             <p>
-            <NavLink exact to ="/login"><button type="button" className="btn btn-warning">Log In</button></NavLink> / 
-            <NavLink exact to ="/signup"><button type="button" className="btn btn-warning">Register</button></NavLink> / 
-            Just want to browse around? Check out our <NavLink exact to ="/groceries"><button type="button" className="btn btn-warning">Grocery List</button></NavLink>
+            <br/>
+                <div className="home_login">
+            <NavLink exact to ="/login"><button type="button" className="btn btn-outline-dark">Log In</button></NavLink>
+                </div>
+                <div className="home_signup">
+            <NavLink exact to ="/signup"><button type="button" className="btn btn-outline-dark">Register</button></NavLink>
+                </div>
+                <div className="home_groceries">
+            Just want to browse around? Check out our <NavLink exact to ="/groceries"><button type="button" className="btn btn-outline-dark">Grocery List</button></NavLink>
+                </div>
             </p>}
+            
         </div>
     )
 }

@@ -33,8 +33,8 @@ function Login( {handleLogin} ) {
 
     return (
 
-
-    <section className="h-100 gradient-form" style={{backgroundColor: '#eee'}}>
+    <section className="h-100 gradient-form" style={{backgroundColor: "#eee"}}>
+    <br/><br/><br/>
         <div className="container py-5 h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-xl-10">
@@ -45,10 +45,8 @@ function Login( {handleLogin} ) {
 
                 <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
                     <div className="text-white px-3 py-4 p-md-5 mx-md-4">
-                      <h4 className="mb-4">We are more than just a company</h4>
-                      <p className="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <h4 className="mb-4">Share your groceries with <b>Gro<i style={{color: 'darkblue'}}>share</i>y</b>, a smarter way to shop!</h4>
+                      <p className="small mb-0">Ever wondered if someone might need just the decent amount of grocery items that you wished you purchased in a decent amount as well, but ended up buying in "too much" quantities at Costco or other big warehouse club chains?  With <b>Gro<i style={{color: 'darkblue'}}>share</i>y</b>, you can sell & buy portion of groceries purchased in excessive quantities from warehouse club chains like Costco, Sam's Club, BJ's, etc.</p>
                     </div>
                   </div>
 
@@ -56,7 +54,7 @@ function Login( {handleLogin} ) {
                     <div className="card-body p-md-5 mx-md-4">
                       <div className="text-center">
                         <img src={icon} style={{width: '185px'}} alt="logo" />
-                        <h4 className="mt-1 mb-5 pb-1">Welcome to <i><b style={{color: 'darkblue'}}>Gro</b><b style={{color: 'red'}}>share</b></i><b style={{color: 'darkblue'}}>y</b></h4>
+                        <h4 className="mt-1 mb-5 pb-1">Welcome to <b>Gro<i style={{color: 'darkblue'}}>share</i>y</b></h4>
                       </div>
                       <form name="login" onSubmit={(event) => handleSubmit(event)}>
                         <p>Please login to your account</p>
@@ -97,6 +95,7 @@ function Login( {handleLogin} ) {
             </div>
           </div>
         </div>
+        {/* <br/><br/><br/><br/> */}
     </section>
     )
 }

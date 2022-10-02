@@ -12,10 +12,11 @@ function NavBar( {user, handleLogout} ) {
     }
 
     return (
+        <div className="navbar_main">
         <nav className="navbar navbar-expand-lg bg-white">
         <div className="container-fluid">
             <NavLink exact to ="/" className="navbar-brand">
-                <img src={logo} alt="Logo" width="150" height="50" />
+                <h3><b>Gro<i style={{color: 'darkblue'}}>share</i>y</b></h3>
             </NavLink>
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -34,6 +35,7 @@ function NavBar( {user, handleLogout} ) {
         </div>
         </div>
         </nav>
+        </div>
 
 
         // <div>

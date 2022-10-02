@@ -75,7 +75,7 @@ function App() {
     <AppContext.Provider value={{ latestGrocery, setLatestGrocery }}>
 
     <div className="App">
-      
+
       <NavBar user={user} handleLogout={handleLogout} />
 
       <Switch>

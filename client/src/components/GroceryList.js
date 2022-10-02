@@ -13,7 +13,8 @@ function GroceryList( {user, groceries, setGroceries} ) {
     }, [])
 
     return (
-        <section style={{backgroundColor: '#eee'}}>
+    <section style={{backgroundColor: '#eee'}}>
+    <br/><br/><br/>
         <div className="text-center container py-5">
             {user ? <Link to='/groceries/new'>
             <div className="user_buttons">
@@ -43,10 +44,7 @@ function GroceryList( {user, groceries, setGroceries} ) {
             : null}
             <br/>
             </div>
-            
-            
-
-        </section>
+    </section>
     )
 }
 

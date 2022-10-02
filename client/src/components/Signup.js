@@ -36,6 +36,7 @@ function Signup( {handleLogin} ) {
 
     return (
     <section className="h-100 gradient-form" style={{backgroundColor: '#eee'}}>
+    <br/><br/><br/>
         <div className="container py-5 h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-xl-10">
@@ -54,7 +55,7 @@ function Signup( {handleLogin} ) {
                     <div className="card-body p-md-5 mx-md-4">
                       <div className="text-center">
                         <img src={icon} style={{width: '185px'}} alt="logo" />
-                        <h4 className="mt-1 mb-5 pb-1">Welcome to <i><b style={{color: 'darkblue'}}>Gro</b><b style={{color: 'red'}}>share</b></i><b style={{color: 'darkblue'}}>y</b></h4>
+                        <h4 className="mt-1 mb-5 pb-1">Welcome to <b>Gro<i style={{color: 'darkblue'}}>share</i>y</b></h4>
                       </div>
 
                       <form name="login" onSubmit={e => handleSubmit(e)}>
@@ -88,6 +89,7 @@ function Signup( {handleLogin} ) {
             </div>
           </div>
         </div>
+        {/* <br/><br/> */}
     </section>
     )
 }
