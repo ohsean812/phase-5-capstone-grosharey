@@ -21,10 +21,10 @@ function GroceryList( {user, groceries, setGroceries} ) {
                 <h5>Add your grocery</h5>
             </span></div></Link> : null}
 
-            <div className="form_label">
-            <h1><b>Groceries</b></h1>
-            {/* <h5 className="mt-4 mb-5">Click on image to see details</h5> */}
-            <p style={{color: "gray"}}>{groceries.length} products</p>
+            <div className="justify_left">
+            <h1><strong>Groceries</strong></h1>
+            <h5>Click on the image to see details</h5>
+            <p className="mt-4 mb-5" style={{color: "#696969"}}>{groceries.length} products</p>
             </div>
 
             <div className="row">

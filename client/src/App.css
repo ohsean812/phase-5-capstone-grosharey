@@ -92,7 +92,7 @@ html, body {
 
 .image_detail {
   width: auto;
-  height: 500px;
+  height: 300px;
   margin: 0 auto;
   display: block;
 }
@@ -150,6 +150,9 @@ div.row {
   font-weight: bold;
 }
 
+.justify_left {
+  text-align: left;
+}
 
 
 .gradient-custom-2 {
