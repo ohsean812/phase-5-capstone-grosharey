@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import GroceryCard from "./GroceryCard";
-// import LatestImage from "./LatestImage";
 
 
 function GroceryList( {user, groceries, setGroceries} ) {
@@ -21,8 +20,12 @@ function GroceryList( {user, groceries, setGroceries} ) {
             <span className="btn btn-outline-primary">
                 <h5>Add your grocery</h5>
             </span></div></Link> : null}
-            <h1><u>hello grocery list!</u></h1>
-            <h3 className="mt-4 mb-5"><strong>(Click the image to see the details)</strong></h3>
+
+            <div className="form_label">
+            <h1><b>Groceries</b></h1>
+            {/* <h5 className="mt-4 mb-5">Click on image to see details</h5> */}
+            <p style={{color: "gray"}}>{groceries.length} products</p>
+            </div>
 
             <div className="row">
                 {groceries.map(grocery => 

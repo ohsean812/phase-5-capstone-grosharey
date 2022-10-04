@@ -55,7 +55,7 @@ return (
 <div className="col-lg-12">
     <div className="card-body p-md-5 mx-md-4">
         <div className="text-center">
-        <img src={icon} style={{width: '185px'}} alt="grocery" />
+        <img src={icon} style={{width: '185px'}} alt="grocery_icon" />
         <h1>add your grocery to <b><i style={{color: 'darkblue'}}>share</i></b></h1>
         <br/><br/>
 
