@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
+import icon from '../icon.png'
 
 function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
 
@@ -13,6 +14,7 @@ function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
     const [store, setStore] = useState("")
     const [date, setDate] = useState("")
     const [image, setImage] = useState("")
+    const [errors, setErrors] = useState([])
 
 
     useEffect(() => {
@@ -22,10 +24,9 @@ function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
     }, [params.id])
 
 
-
     function handleSubmit(e) {
-        e.preventDefault()
 
+        e.preventDefault()
 
         const data = new FormData();
 
@@ -60,42 +61,84 @@ function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
                 resp.json().then(() => history.push('/groceries'))
                 .catch((error) => console.error(error));
             } else {
-                // resp.json().then((error) => setErrors([error]))
-                resp.json().then(() => history.push('/login'))
+                resp.json().then((error) => setErrors([error]))
+                // resp.json().then(() => history.push('/login'))
             }
         })
     }
 
 
+return (
+    <section className="h-100 gradient-form" style={{backgroundColor: "#eee"}}>
+    <br/><br/><br/>
+        <div className="container py-5 h-100">
+            <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="col-xl-10">
+                <div className="card rounded-3 text-black">
+                <div className="row g-0">
 
-    return (
-        <div>
-            <h1>hello EDIT form!</h1>
-            {/* <form onSubmit = {handleSubmit}> */}
+<div className="col-lg-12">
+    <div className="card-body p-md-5 mx-md-4">
+        <div className="text-center">
+        <img src={icon} style={{width: '185px'}} alt="grocery" />
+        <h1>edit your <b><i style={{color: 'darkblue'}}>share</i></b>d grocery post</h1>
+        <br/><br/>
+
+        <div className="form_width">
+
             <form onSubmit = {(e) => handleSubmit(e)}>
-                {/* <input type="text" name="name" onChange={e=>setName(e.target.value)} value={name} /><br/>
-                <input type="number" min="0" name="price" onChange={e=>setPrice(e.target.value)} value={price} /><br/>
-                <input type="text" name="quantity" onChange={e=>setQuantity(e.target.value)} value={quantity} /><br/>
-                <input type="text" name="store" onChange={e=>setStore(e.target.value)} value={store} /><br/>
-                <input type="date" name="date" onChange={e=>setDate(e.target.value)} value={date} /><br/> */}
 
-                <input type="text" name="name" onChange={e=>setName(e.target.value)} value={name} id="name" /><br/>
-                <input type="number" min="0" name="price" onChange={e=>setPrice(e.target.value)} value={price} id="price" /><br/>
-                <input type="text" name="quantity" onChange={e=>setQuantity(e.target.value)} value={quantity} id="quantity" /><br/>
-                <input type="text" name="store" onChange={e=>setStore(e.target.value)} value={store} id="store" /><br/>
-                <input type="date" name="date" onChange={e=>setDate(e.target.value)} value={date} id="date" /><br/>
+                <div className="form_label">
+                    <label>Grocery Name</label>
+                    <input type="text" className="form-control" name="name" onChange={e=>setName(e.target.value)} value={name} id="name" /><br/>
+                </div>
 
-                <label htmlFor="image">Replace Image</label>
-                <input type="file" name="image" onChange={e=>setImage(e.target.value)} value={image} id="image" /><br/>
+                <div className="form_label">
+                    <label>Price</label>
+                    <input type="number" className="form-control" min="0" name="price" onChange={e=>setPrice(e.target.value)} value={price} id="price" /><br/>
+                </div>
 
-                <button type="submit">Update</button>
-                <Link to={`/groceries`}><button>Cancel</button></Link>
+                <div className="form_label">
+                    <label>Quantity</label>
+                    <input type="text" className="form-control" name="quantity" onChange={e=>setQuantity(e.target.value)} value={quantity} id="quantity" /><br/>
+                </div>
+
+                <div className="form_label">
+                    <label>Store Purchsed From</label>
+                    <input type="text" className="form-control" name="store" onChange={e=>setStore(e.target.value)} value={store} id="store" /><br/>
+                </div>
+
+                <div className="form_label">
+                    <label>Purchase Date</label>
+                    <input type="date" className="form-control" name="date" onChange={e=>setDate(e.target.value)} value={date} id="date" /><br/>
+                </div>
+
+                <div className="form_label">
+                    <label>Replace Image</label>
+                    <input type="file" className="form-control" name="image" onChange={e=>setImage(e.target.value)} value={image} id="image" /><br/><br/>
+                </div>
+
+                <button type="submit" className="btn btn-outline-success">Update</button>
+                <Link to={`/groceries`}><button className="btn btn-outline-danger">Cancel</button></Link>
                 {/* {errors.map((err)=>(
                     <Error key={err}>{err.error}</Error>
                 ))} */}
+                {errors.map((err) =>
+                <div key={err}>{err.error}</div>)}
             </form>
         </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
     )
 }
 
-export default GroceryEditForm
+export default GroceryEditForm;

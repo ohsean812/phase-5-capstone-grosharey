@@ -21,7 +21,6 @@ function GroceryList( {user, groceries, setGroceries} ) {
             <span className="btn btn-outline-primary">
                 <h5>Add your grocery</h5>
             </span></div></Link> : null}
-            <br/>
             <h1><u>hello grocery list!</u></h1>
             <h3 className="mt-4 mb-5"><strong>(Click the image to see the details)</strong></h3>
 

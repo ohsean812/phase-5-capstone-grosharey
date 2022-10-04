@@ -104,7 +104,7 @@ html, body {
 
 .navbar_main {
   position: fixed; /* Set the navbar to fixed position */
-  z-index:1;
+  z-index: 1;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
 }
@@ -140,10 +140,15 @@ div.row {
 }
 
 
+.form_width {
+  display: inline-block;
+  width: 35%;
+}
 
-
-
-
+.form_label {
+  text-align: left;
+  font-weight: bold;
+}
 
 
 

@@ -53,7 +53,7 @@ function Login( {handleLogin} ) {
                   <div className="col-lg-6">
                     <div className="card-body p-md-5 mx-md-4">
                       <div className="text-center">
-                        <img src={icon} style={{width: '185px'}} alt="logo" />
+                        <img src={icon} style={{width: '185px'}} alt="grocery" />
                         <h4 className="mt-1 mb-5 pb-1">Welcome to <b>Gro<i style={{color: 'darkblue'}}>share</i>y</b></h4>
                       </div>
                       <form name="login" onSubmit={(event) => handleSubmit(event)}>
