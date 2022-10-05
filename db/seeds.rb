@@ -223,8 +223,7 @@ grocery20 = Grocery.create!(name: "Strawberry Jam",
 puts "seeding comments..."
 
 30.times do
-    # Comment.create!(content: Faker::Company.bs, user_id: User.pluck(:id).sample, grocery_id: Grocery.pluck(:id).sample )
-    Comment.create!(content: "is this still available?", user_id: User.pluck(:id).sample, grocery_id: Grocery.pluck(:id).sample )
+    Comment.create!(content: Faker::Marketing.buzzwords, user_id: User.pluck(:id).sample, grocery_id: Grocery.pluck(:id).sample)
 end
 
 

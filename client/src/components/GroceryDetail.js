@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import GroceryComments from "./GroceryComments";
-// import LatestImage from "./LatestImage";
+
 
 function GroceryDetail( {user, updateCommentsMasterState} ) {
 
@@ -74,7 +74,16 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
 
     return (
     <section style={{backgroundColor: '#eee'}}>
-        <br/><br/><br/><br/><br/>
+        <br/><br/>
+
+        <div className="text-center container py-5">
+            <Link to='/groceries'>
+            <div className="user_buttons">
+            <span className="btn btn-outline-secondary">
+                <h5>Back to List</h5>
+            </span>
+            </div></Link>
+
         <div>
             <h1><b>{grocery.name}</b></h1>
             <br/>
@@ -95,19 +104,15 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
                 </div>
             </div>
             
-
-
             <div className="container py-5 h-100">
               <div className="row d-flex justify-content-center align-items-center h-100">
                 <div className="col-xl-10">
                   <div className="card rounded-3 text-black">
                     <div className="row g-0">
 
-
 <div className="col-lg-12">
     <div className="card-body p-md-5 mx-md-4">
         <div className="text-center">
-
 
             <div className="form-control"><h3>Chat with other users about this item!</h3></div>
             <br/>
@@ -117,18 +122,21 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
             <form onSubmit={handleSubmit}>
                 <label htmlFor="chat"><b>Chat &nbsp;</b></label>
                 
-                
                 <input autoComplete="off" name="content" className="form_width" onChange={e => setContent(e.target.value)} value={content} />
                 <button type="submit">Send</button>
             </form>
 
+        </div></div></div>
+    </div></div></div></div></div>
 
-</div></div></div>
+        <Link to='/groceries'>
+        <div className="user_buttons">
+        <span className="btn btn-outline-secondary">
+            <h5>Back to List</h5>
+        </span>
+        </div></Link>
 
-            </div></div></div></div></div>
-
-
-
+        </div>
         </div>
     </section>
     )
