@@ -3,7 +3,7 @@ import { Link, useHistory, useParams } from "react-router-dom";
 import GroceryComments from "./GroceryComments";
 
 
-function GroceryDetail( {user, updateCommentsMasterState} ) {
+function GroceryDetail( {user, groceries, setGroceries, updateCommentsMasterState} ) {
 
     const history = useHistory()
     const params = useParams()
@@ -71,6 +71,12 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
             .catch((error) => console.error(error));
     }, [])
 
+    function handleDelete(e) {
+        e.preventDefault()
+        fetch(`/groceries/${grocery.id}`, {method: "DELETE"})
+        .then(() => setGroceries(groceries.filter(groceryObj => groceryObj.id !== grocery.id)))
+        .then(() => history.push('/groceries'))
+    }
 
     return (
     <section style={{backgroundColor: '#eee'}}>
@@ -94,6 +100,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
                 </div>
 
                 <div className="col-6 col-md-4">
+
                     <div className="justify_left">
                     <h3>Purchased from {grocery.store}</h3>
                     <h3>Purchase Date: {grocery.date}</h3>
@@ -101,6 +108,21 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
                     <br/><br/>
                     <h1 style={{color: "darkblue", display: 'inline'}}><b>${grocery.price}.00 </b></h1> <h3 style={{display: 'inline'}}>for {grocery.quantity}</h3>
                     </div>
+
+            <div className="user_buttons">
+                {user && (user.username === grocery.owner) ?
+                    <Link to={`/groceries/${grocery.id}/edit`}>
+                    <span className="btn btn-outline-secondary btn-sm">Edit</span>
+                    </Link>
+                : <br/>}
+                &nbsp;
+                {user && (user.username === grocery.owner) ?
+                    <Link to={'/groceries'}>
+                    <span className="btn btn-outline-secondary btn-sm" onClick={handleDelete}>Delete</span>
+                    </Link>
+                : null}
+            </div>
+
                 </div>
             </div>
             

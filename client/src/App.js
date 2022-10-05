@@ -89,7 +89,7 @@ function App() {
         </Route>
 
         <Route exact path = "/groceries/:id">
-          <GroceryDetail user={user} updateCommentsMasterState={updateCommentsMasterState} />
+          <GroceryDetail user={user} groceries={groceries} setGroceries={setGroceries} updateCommentsMasterState={updateCommentsMasterState} />
         </Route>
 
         <Route exact path = "/groceries">

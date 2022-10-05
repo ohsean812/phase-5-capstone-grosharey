@@ -96,6 +96,7 @@ return (
                 </div>
 
                 <button type="submit" className="btn btn-outline-success">Submit</button>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <Link to={`/groceries`}><button className="btn btn-outline-danger">Cancel</button></Link>
             
                 {/* {errors.map((err)=>(

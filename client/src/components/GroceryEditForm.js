@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useHistory, useParams, Link } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import icon from '../icon.png'
 
 function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
@@ -121,7 +121,9 @@ return (
                 </div>
 
                 <button type="submit" className="btn btn-outline-success">Update</button>
-                <Link to={`/groceries`}><button className="btn btn-outline-danger">Cancel</button></Link>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <button className="btn btn-outline-danger" onClick={history.goBack}>Cancel</button>
+
                 {/* {errors.map((err)=>(
                     <Error key={err}>{err.error}</Error>
                 ))} */}

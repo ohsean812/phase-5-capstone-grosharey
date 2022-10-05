@@ -35,7 +35,8 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
                     <Link to={`/groceries/${grocery.id}/edit`}>
                     <span className="btn btn-outline-secondary btn-sm">Edit</span>
                     </Link>
-                : <br/>}
+                : null}
+                &nbsp;
                 {user && (user.username === grocery.owner) ?
                     <Link to={'/groceries'}>
                     <span className="btn btn-outline-secondary btn-sm" onClick={handleDelete}>Delete</span>
