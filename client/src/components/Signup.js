@@ -44,10 +44,8 @@ function Signup( {handleLogin} ) {
                 <div className="row g-0">
                 <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
                     <div className="text-white px-3 py-4 p-md-5 mx-md-4">
-                      <h4 className="mb-4">We are more than just a company</h4>
-                      <p className="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <h4 className="mb-4">Share your groceries with <b>Gro<i style={{color: 'darkblue'}}>share</i>y</b>, a smarter way to shop!</h4>
+                      <p className="small mb-0">Ever wondered if someone might need just the decent amount of grocery items that you wished you purchased in a decent amount as well, but ended up buying in "too much" quantities at Costco or other big warehouse club chains?  With <b>Gro<i style={{color: 'darkblue'}}>share</i>y</b>, you can sell & buy portion of groceries purchased in excessive quantities from warehouse club chains like Costco, Sam's Club, BJ's, etc.</p>
                     </div>
                   </div>
 

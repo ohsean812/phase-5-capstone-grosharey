@@ -23,6 +23,8 @@ function GroceryAddForm( {user} ) {
         submitToApi(data);
     }
 
+
+
     function submitToApi(data) {
         
         if (!user) {user = {id: 0}}

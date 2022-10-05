@@ -16,6 +16,8 @@ function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
     const [image, setImage] = useState("")
     const [errors, setErrors] = useState([])
 
+    console.log(price)
+
 
     useEffect(() => {
         fetch(`/groceries/${params.id}`)

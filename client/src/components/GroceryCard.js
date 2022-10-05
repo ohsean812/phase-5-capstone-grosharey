@@ -52,7 +52,7 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
                 </div>
             </Link>)
             :
-            (<Link to={'/'}>
+            (<Link to={'/login'}>
                 <div className="article-container">
                 <div className="article-img-holder">
                     <img src={image} alt="grocery_thumbnail" className="image_thumbnail" />

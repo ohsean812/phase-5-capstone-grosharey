@@ -57,7 +57,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
     }
 
     const sortedComments = [...comments].sort((a,b) => a.id - b.id)
-    const renderComments = sortedComments.map((commentObj) => <GroceryComments comment={commentObj} key={commentObj.id} />)
+    const renderComments = sortedComments.map((commentObj) => <GroceryComments key={commentObj.id} comment={commentObj} user={user} />)
     
 
     const [ image, setImage ] = useState("")
@@ -90,7 +90,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
                     <h3>Purchase Date: {grocery.date}</h3>
                     <h3>Posted by {grocery.owner}</h3>
                     <br/><br/>
-                    <h1 style={{color: "darkblue", display: 'inline'}}><b>${grocery.price}.00</b></h1> <h3 style={{display: 'inline'}}>for {grocery.quantity}</h3>
+                    <h1 style={{color: "darkblue", display: 'inline'}}><b>${grocery.price}.00 </b></h1> <h3 style={{display: 'inline'}}>for {grocery.quantity}</h3>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
         <div className="text-center">
 
 
-            <h2>Chat with other users about this item!</h2>
+            <div className="form-control"><h3>Chat with other users about this item!</h3></div>
             <br/>
                 {renderComments}
             <br/>
@@ -117,7 +117,8 @@ function GroceryDetail( {user, updateCommentsMasterState} ) {
             <form onSubmit={handleSubmit}>
                 <label htmlFor="chat"><b>Chat &nbsp;</b></label>
                 
-                <input name="content" onChange={e => setContent(e.target.value)} value={content} />
+                
+                <input autoComplete="off" name="content" className="form_width" onChange={e => setContent(e.target.value)} value={content} />
                 <button type="submit">Send</button>
             </form>
 
