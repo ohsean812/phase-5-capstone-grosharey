@@ -92,18 +92,16 @@ return (
 
                 <div className="form_label">
                     <label>Upload Image</label>
-                    <input type="file" className="form-control" name="image" id="image" /><br/><br/>
+                    <input type="file" className="form-control" name="image" id="image" /><br/>
                 </div>
 
-                <button type="submit" className="btn btn-outline-success">Submit</button>
+                {errors.map((err) =>
+                <div key={err}>{err.errors}</div>)}
+
+                <br/><button type="submit" className="btn btn-outline-success">Submit</button>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <Link to={`/groceries`}><button className="btn btn-outline-danger">Cancel</button></Link>
-            
-                {/* {errors.map((err)=>(
-                    <Error key={err}>{err.error}</Error>
-                ))} */}
-                {errors.map((err) =>
-                <div key={err}>{err.error}</div>)}
+
 
             </form>
         </div>

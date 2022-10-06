@@ -16,8 +16,6 @@ function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
     const [image, setImage] = useState("")
     const [errors, setErrors] = useState([])
 
-    console.log(price)
-
 
     useEffect(() => {
         fetch(`/groceries/${params.id}`)
@@ -117,18 +115,16 @@ return (
 
                 <div className="form_label">
                     <label>Replace Image</label>
-                    <input type="file" className="form-control" name="image" onChange={e=>setImage(e.target.value)} value={image} id="image" /><br/><br/>
+                    <input type="file" className="form-control" name="image" onChange={e=>setImage(e.target.value)} value={image} id="image" /><br/>
                 </div>
 
-                <button type="submit" className="btn btn-outline-success">Update</button>
+                {errors.map((err) =>
+                <div key={err}>{err.errors}</div>)}
+
+                <br/><button type="submit" className="btn btn-outline-success">Update</button>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <button className="btn btn-outline-danger" onClick={history.goBack}>Cancel</button>
 
-                {/* {errors.map((err)=>(
-                    <Error key={err}>{err.error}</Error>
-                ))} */}
-                {errors.map((err) =>
-                <div key={err}>{err.error}</div>)}
             </form>
         </div>
     </div>
