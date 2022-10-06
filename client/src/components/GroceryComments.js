@@ -1,12 +1,9 @@
 import React from "react";
 
-
 function GroceryComments( {comment, user} ) {
 
     return (
-
         <div className="container text-center">
-
         <div className="row">
 
             <div className="col-lg-2">
@@ -56,4 +53,4 @@ function GroceryComments( {comment, user} ) {
     )
 }
 
-export default GroceryComments
+export default GroceryComments;

@@ -1,7 +1,6 @@
 class GroceriesController < ApplicationController
 
-  # before_action :set_grocery, only: %i[ show update destroy ]
-  skip_before_action :authorize, only: [:index, :show, :grocery_image, :groceries_images]
+  skip_before_action :authorize, only: [:index, :show, :groceries_images, :grocery_image]
 
   # GET /groceries
   def index
@@ -35,18 +34,11 @@ class GroceriesController < ApplicationController
     head :no_content
   end
 
-  # def latest
-  #   # grocery = Grocery.find(params[:id])
-  #   grocery = Grocery.last
-  #   render json: GrocerySerializer.new(grocery).serializable_hash[:data][:attributes]
-  # end
-
   def groceries_images
     groceries = Grocery.all
     groceries_mapped = groceries.map{|grocery| GrocerySerializer.new(grocery).serializable_hash[:data][:attributes]}
     render json: groceries_mapped
   end
-
 
   def grocery_image
     grocery = Grocery.find(params[:id])
@@ -56,14 +48,8 @@ class GroceriesController < ApplicationController
 
   private
 
-    # Use callbacks to share common setup or constraints between actions.
-    # def set_grocery
-    #   grocery = Grocery.find(params[:id])
-    # end
-
-    # Only allow a list of trusted parameters through.
-    def grocery_params
-      params.permit(:name, :price, :quantity, :store, :date, :owner, :image)
-    end
+  def grocery_params
+    params.permit(:name, :price, :quantity, :store, :date, :owner, :image)
+  end
 
 end

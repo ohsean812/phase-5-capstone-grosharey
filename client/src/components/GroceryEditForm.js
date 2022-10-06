@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import icon from '../icon.png'
 
-function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
+function GroceryEditForm( {user} ) {
 
     const history = useHistory()
     const params = useParams()
@@ -25,7 +25,6 @@ function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
 
 
     function handleSubmit(e) {
-
         e.preventDefault()
 
         const data = new FormData();
@@ -38,53 +37,41 @@ function GroceryEditForm( {user, replaceUpdatedGrocery} ) {
         data.append("owner", user.username);
         data.append("image", e.target.image.files[0]);
         submitToApi(data);
-
     }
 
-    function submitToApi(data) {
 
+    function submitToApi(data) {
         if (!user) {user = {id: 0}}
         fetch(`/groceries/${params.id}`, {
             method: "PATCH",
-            // headers: {"Content-Type": "application/json"},
             body: data
-            // body: JSON.stringify({
-            //     name,
-            //     price,
-            //     quantity,
-            //     store,
-            //     date,
-            //     owner: user.username
-            })
+        })
         .then(resp => {
             if (resp.ok) {
                 resp.json().then(() => history.push('/groceries'))
                 .catch((error) => console.error(error));
             } else {
                 resp.json().then((error) => setErrors([error]))
-                // resp.json().then(() => history.push('/login'))
             }
         })
     }
 
 
 return (
-    <section className="h-100 gradient-form" style={{backgroundColor: "#eee"}}>
+<section className="h-100 gradient-form" style={{backgroundColor: "#eee"}}>
     <br/><br/><br/>
         <div className="container py-5 h-100">
             <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-xl-10">
                 <div className="card rounded-3 text-black">
                 <div className="row g-0">
-
-<div className="col-lg-12">
+    <div className="col-lg-12">
     <div className="card-body p-md-5 mx-md-4">
         <div className="text-center">
         <img src={icon} style={{width: '185px'}} alt="grocery_icon" />
         <h1>edit your <b><i style={{color: 'darkblue'}}>share</i></b>d grocery post</h1>
         <br/><br/>
-
-        <div className="form_width">
+    <div className="form_width">
 
             <form onSubmit = {(e) => handleSubmit(e)}>
 
@@ -126,18 +113,17 @@ return (
                 <button className="btn btn-outline-danger" onClick={history.goBack}>Cancel</button>
 
             </form>
+
+            </div>
         </div>
     </div>
-</div>
-
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-        </div>
-    </section>
+    </div>
+</section>
     )
 }
 

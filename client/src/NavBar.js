@@ -1,5 +1,4 @@
 import React from "react";
-import logo from './logo.jpeg'
 import { NavLink } from "react-router-dom";
 
 function NavBar( {user, handleLogout} ) {
@@ -12,12 +11,13 @@ function NavBar( {user, handleLogout} ) {
     }
 
     return (
-        <div className="navbar_main">
+    <div className="navbar_main">
         <nav className="navbar navbar-expand-lg bg-white">
         <div className="container-fluid">
             <NavLink exact to ="/" className="navbar-brand">
-                <h3><b>Gro<i style={{color: 'darkblue'}}>share</i>y</b></h3>
+                <h3><b>&nbsp; Gro<i style={{color: 'darkblue'}}>share</i>y</b></h3>
             </NavLink>
+            
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
@@ -33,17 +33,10 @@ function NavBar( {user, handleLogout} ) {
                 </li>
             </ul>
         </div>
+
         </div>
         </nav>
-        </div>
-
-
-        // <div>
-        //     <NavLink path to ="/">Logo</NavLink> / 
-        //     <NavLink path to ="/groceries">Groceries</NavLink> / 
-        //     {user ? <NavLink path to="/" onClick={onLogout}>Logout</NavLink> : <NavLink path to ="/login">Login</NavLink>} / 
-        //     <NavLink path to ="/signup">Register</NavLink>
-        // </div>
+    </div>
     )
 }
 

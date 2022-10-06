@@ -62,11 +62,6 @@ function App() {
   }
   useEffect(() => fetchAllGroceries(), [])
 
-  function replaceUpdatedGrocery(new_grocery){
-    let filterdGroceries = groceries.filter(grocery => grocery.id !== new_grocery.id)
-    filterdGroceries.push(new_grocery)
-    setGroceries(filterdGroceries)
-  }
 
   const [latestGrocery, setLatestGrocery] = useState(AppContext)
 
@@ -85,7 +80,7 @@ function App() {
         </Route>
 
         <Route exact path = "/groceries/:id/edit">
-          <GroceryEditForm user={user} replaceUpdatedGrocery={replaceUpdatedGrocery} />
+          <GroceryEditForm user={user} />
         </Route>
 
         <Route exact path = "/groceries/:id">

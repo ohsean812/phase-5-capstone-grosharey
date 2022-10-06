@@ -1,8 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-// import { AppContext } from "../App";
 import { Link } from 'react-router-dom';
-// import LatestImage from "./LatestImage";
-
 
 function GroceryCard( {user, grocery, groceries, setGroceries} ) {
 
@@ -16,7 +13,6 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
             })
             .catch((error) => console.error(error));
     }, [])
-
     
 
     function handleDelete(e) {
@@ -63,14 +59,13 @@ function GroceryCard( {user, grocery, groceries, setGroceries} ) {
             }
 
             <div className="card-body">
-            <h3 className="card-title mb-3"><b>{grocery.name}</b></h3>
-            <p className="card-text">
-                <h5>{grocery.quantity}</h5>
-                <h5><b>${grocery.price}.00</b></h5><br/>
-            </p>
+                <h3 className="card-title mb-3"><b>{grocery.name}</b></h3>
+                <p className="card-text">
+                    <h5>{grocery.quantity}</h5>
+                    <h5><b>${grocery.price}.00</b></h5><br/>
+                </p>
             </div>
 
-        
         </div>
     )
 }

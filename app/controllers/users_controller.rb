@@ -2,7 +2,6 @@ class UsersController < ApplicationController
 
     skip_before_action :authorize, only: [:create]
     
-# DO I NEED INDEX AND SHOW?
     def index
         render json: User.all
     end
@@ -11,7 +10,6 @@ class UsersController < ApplicationController
         user = User.find(params[:id])
         render json: user, status: :ok
     end
-# DO I NEED INDEX AND SHOW?
 
     def get_logged_in
         user = User.find(session[:user_id])
@@ -28,6 +26,7 @@ class UsersController < ApplicationController
         end
     end
 
+    
     private
 
     def user_params

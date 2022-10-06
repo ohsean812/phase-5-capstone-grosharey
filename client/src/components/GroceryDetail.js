@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
 import GroceryComments from "./GroceryComments";
 
-
 function GroceryDetail( {user, groceries, setGroceries, updateCommentsMasterState} ) {
 
     const history = useHistory()
@@ -109,19 +108,19 @@ function GroceryDetail( {user, groceries, setGroceries, updateCommentsMasterStat
                     <h1 style={{color: "darkblue", display: 'inline'}}><b>${grocery.price}.00 </b></h1> <h3 style={{display: 'inline'}}>for {grocery.quantity}</h3>
                     </div>
 
-            <div className="user_buttons">
-                {user && (user.username === grocery.owner) ?
-                    <Link to={`/groceries/${grocery.id}/edit`}>
-                    <span className="btn btn-outline-secondary btn-sm">Edit</span>
-                    </Link>
-                : <br/>}
-                &nbsp;
-                {user && (user.username === grocery.owner) ?
-                    <Link to={'/groceries'}>
-                    <span className="btn btn-outline-secondary btn-sm" onClick={handleDelete}>Delete</span>
-                    </Link>
-                : null}
-            </div>
+                    <div className="user_buttons">
+                        {user && (user.username === grocery.owner) ?
+                            <Link to={`/groceries/${grocery.id}/edit`}>
+                            <span className="btn btn-outline-secondary btn-sm">Edit</span>
+                            </Link>
+                        : <br/>}
+                        &nbsp;
+                        {user && (user.username === grocery.owner) ?
+                            <Link to={'/groceries'}>
+                            <span className="btn btn-outline-secondary btn-sm" onClick={handleDelete}>Delete</span>
+                            </Link>
+                        : null}
+                    </div>
 
                 </div>
             </div>
@@ -131,10 +130,9 @@ function GroceryDetail( {user, groceries, setGroceries, updateCommentsMasterStat
                 <div className="col-xl-10">
                   <div className="card rounded-3 text-black">
                     <div className="row g-0">
-
-<div className="col-lg-12">
-    <div className="card-body p-md-5 mx-md-4">
-        <div className="text-center">
+            <div className="col-lg-12">
+                <div className="card-body p-md-5 mx-md-4">
+                    <div className="text-center">
 
             <div className="form-control"><h3>Chat with other users about this item!</h3></div>
             <br/>
@@ -143,20 +141,20 @@ function GroceryDetail( {user, groceries, setGroceries, updateCommentsMasterStat
 
             <form onSubmit={handleSubmit}>
                 <label htmlFor="chat"><b>Chat &nbsp;</b></label>
-                
                 <input autoComplete="off" name="content" className="form_width" onChange={e => setContent(e.target.value)} value={content} />
                 <button type="submit">Send</button>
             </form>
 
-        </div></div></div>
-    </div></div></div></div></div>
+            </div></div></div>
+            </div></div></div></div></div>
 
         <Link to='/groceries'>
-        <div className="user_buttons">
-        <span className="btn btn-outline-secondary">
-            <h5>Back to List</h5>
-        </span>
-        </div></Link>
+            <div className="user_buttons">
+                <span className="btn btn-outline-secondary">
+                    <h5>Back to List</h5>
+                </span>
+            </div>
+        </Link>
 
         </div>
         </div>

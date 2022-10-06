@@ -46,15 +46,12 @@ html, body {
   background-attachment: fixed;
 }
 
-
 .home_contents {
   text-align: left;
   position: relative;
   top: 150px;
-  margin: -20px 200px 0px 200px
-  
+  margin: -20px 200px 0px 200px;
 }
-
 
 .background, html {
   background-color: #eee;
@@ -82,7 +79,6 @@ html, body {
   margin-left: 200px;
   top: -76px
 }
-
 
 .image_thumbnail {
   width: 300px;
@@ -123,10 +119,6 @@ div.row {
 .article-img-holder {
   width: 100%;
   height: 100%;
-  /* background: url(https://awik.io/demo/background-image-zoom/traffic2.jpg); */
-  /* background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
   transition: all 1s;
 }
 
@@ -138,7 +130,6 @@ div.row {
   text-align: right;
   padding: 10px;
 }
-
 
 .form_width {
   display: inline-block;

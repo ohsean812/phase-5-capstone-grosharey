@@ -12,9 +12,6 @@ Rails.application.routes.draw do
   delete '/logout', to: "sessions#destroy"
   get '/images', to: "groceries#groceries_images"
   get '/images/:id', to: "groceries#grocery_image"
-  # get '/latest', to: "groceries#latest"
-
-
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
