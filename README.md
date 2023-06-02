@@ -23,18 +23,27 @@ To get started with Grosharey, follow these steps:
 ## Running the Application
 
 1. This application uses Ruby for the backend. Run the command `rails s` to start the server.
-$ rails s
 2. While the server is running, open a separate terminal. In this new terminal, run the command `npm start --prefix client` to start the application and open it in your browser.
-$ npm start --prefix client
 
 
 
 ## Navigation
 
+The following navigation options are available on the website:
+
+### Browse Groceries
 * As a non-logged-in user, you can browse the list of groceries uploaded by users, but you can't get into details or buy/sell groceries.
-* Signup: You can create a new account to get more access to the website.
-* Login: Log into the website with the account credentials you created.
-* Add your grocery: Upload a grocery item(s) you would like to sell. Enter details such as name, price, quantity, purchsed store, purchase date, and image. (You can edit or delete the ones you uploaded yourself)
+
+### Signup
+* You can create a new account to get more access to the website.
+
+### Login
+* Log into the website with the account credentials you created.
+
+### Add Your Grocery
+* Upload a grocery item(s) you would like to sell. Enter details such as name, price, quantity, purchased store, purchase date, and image. You can edit or delete the ones you uploaded yourself.
+
+### Chat with Other Users
 * In each grocery item, chat with other users to ask questions, negotiate, or reach out to the owner.
 
 
