@@ -1,24 +1,35 @@
-# README
+# Welcome to Grosharey!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Are you tired of buying more groceries than you need from big warehouse club chains like Costco or Sam's Club? With Grosharey, you have the opportunity to sell or purchase a portion of those excess groceries. Say goodbye to wastage and embrace a more efficient way to share and acquire just the right amount of groceries you need.
 
-Things you may want to cover:
 
-* Ruby version
+## Table of Contents
 
-* System dependencies
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-* Configuration
+## Installation
 
-* Database creation
+To get started with Project Name, follow these steps:
 
-* Database initialization
+1. Clone the repository: `git clone git@github.com:ohsean812/phase-5-capstone-grosharey.git`
+2. Navigate to the project directory: `cd phase-5-capstone-grosharey`
+3. Install the dependencies: `npm install` (or any other installation command specific to your project)
 
-* How to run the test suite
+## Usage
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## Contributing
+
+
+
+## License
+
+
+
+## Contact
+
+If you have any questions, suggestions, or feedback, feel free to reach out at [ohsean812@gmail.com].
