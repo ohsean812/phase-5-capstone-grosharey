@@ -6,27 +6,36 @@ Are you tired of buying more groceries than you need from big warehouse club cha
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Run the App](#running-the-application)
+- [Navigation](#navigation)
+- [Contact](#contact)
+
 
 ## Installation
 
-To get started with Project Name, follow these steps:
+To get started with Grosharey, follow these steps:
 
 1. Clone the repository: `git clone git@github.com:ohsean812/phase-5-capstone-grosharey.git`
 2. Navigate to the project directory: `cd phase-5-capstone-grosharey`
-3. Install the dependencies: `npm install` (or any other installation command specific to your project)
-
-## Usage
+3. Install the dependencies: `npm install`
 
 
+## Running the Application
 
-## Contributing
+1. This application uses Ruby for the backend. Run the command `rails s` to start the server.
+$ rails s
+2. While the server is running, open a separate terminal. In this new terminal, run the command `npm start --prefix client` to start the application and open it in your browser.
+$ npm start --prefix client
 
 
 
-## License
+## Navigation
+
+* As a non-logged-in user, you can browse the list of groceries uploaded by users, but you can't get into details or buy/sell groceries.
+* Signup: You can create a new account to get more access to the website.
+* Login: Log into the website with the account credentials you created.
+* Add your grocery: Upload a grocery item(s) you would like to sell. Enter details such as name, price, quantity, purchsed store, purchase date, and image. (You can edit or delete the ones you uploaded yourself)
+* In each grocery item, chat with other users to ask questions, negotiate, or reach out to the owner.
 
 
 
