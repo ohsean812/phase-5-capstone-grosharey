@@ -22,7 +22,7 @@ To get started with Grosharey, follow these steps:
 
 ## Running the Application
 
-1. This application uses Ruby for the backend. Run the command `rails s` to start the server.
+1. This application uses Ruby 2.7.4. Run the command `rails s` to start the server.
 2. While the server is running, open a separate terminal. In this new terminal, run the command `npm start --prefix client` to start the application and open it in your browser.
 
 
