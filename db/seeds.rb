@@ -15,6 +15,7 @@ user1 = User.create!(username: "seanoh812", password: "flatiron", password_confi
 user2 = User.create!(username: "ricardo627", password: "flatiron", password_confirmation: "flatiron")
 user3 = User.create!(username: "gehrigb7", password: "flatiron", password_confirmation: "flatiron")
 user4 = User.create!(username: "shreepandey", password: "flatiron", password_confirmation: "flatiron")
+user5 = User.create!(username: "testuser", password: "Passw0rd!", password_confirmation: "Passw0rd!")
 
 
 puts "seeding groceries..."
